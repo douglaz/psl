@@ -1,0 +1,1 @@
+This is a stub for an introduction to probabilistic soft logic.
