@@ -12,6 +12,6 @@ A v B = min{A+B,1}
 
 These logical formulas are used as features to a Markov network, and each are associated with a weight in order to statistically model the interactions among them. The weights could either be specified manually or be learned from data with PSL's suite of learning algorithms. In addition, PSL provides sophisticated techniques for learning the weights of the formulas and for inferring the most likely answer to a user's query. The "softening" of the logical formulas allows the inference problem to be cast as a polynomial-time inference problem rather than as a (much more difficult) NP-hard combinatorial one.
 
-For more details on PSL, please refer to the paper Probabilistic Similarity Logic. 
+For more details on PSL, please refer to the paper Probabilistic Similarity Logic<a>aaa</a>. 
 
 <To be cleaned up later today>
