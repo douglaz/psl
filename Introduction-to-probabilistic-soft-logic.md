@@ -6,7 +6,7 @@ In "soft" logic, logical constructs need not be strictly false(0) or true(1) but
 `A v B = min{A+B,1}`<br>
 `~A = 1-A`<br>
 
-(Note that if the values of `A` and `B` are restricted to exactly false and true, then the logical operators work as they are conventionally defined.) PSL provides an interface in the <a href="http://groovy.codehaus.org/">Groovy</a> programming language for users to declaratively encode their knowledge of a particular domain in soft logic. 
+(Note that if the values of `A` and `B` are restricted to be false or true, then the logical operators work as they are conventionally defined.) PSL provides an interface in the <a href="http://groovy.codehaus.org/">Groovy</a> programming language for users to declaratively encode their knowledge of a particular domain in soft logic. 
 
 These logical formulas are used as features of a Markov network, and each are associated with a weight in order to statistically model the interactions among them. The weights could either be specified manually or be learned from data with PSL's suite of learning algorithms. PSL also provides sophisticated inference techniques for finding the most likely answer to a user's query. The softening of the logical formulas allows the inference problem to be cast as a polynomial-time optimization problem rather than as a (much more difficult NP-hard) combinatorial one.
 
