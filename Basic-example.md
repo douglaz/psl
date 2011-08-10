@@ -1,1 +1,1 @@
-Testing link[[building-psl]].
+Testing [[link]].
