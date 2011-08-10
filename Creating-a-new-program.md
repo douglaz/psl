@@ -9,12 +9,12 @@ The [[Maven|http://maven.apache.org]] [[archetype plugin|http://maven.apache.org
 
 The project will be set up with configuration files in
 
-    ${project.basedir}/src/main/resources
+    <project root>/src/main/resources
 
 You can place Java and Groovy source files in
 
-    ${project.basedir}/src/main/java
+    <project root>/src/main/java
 
 A stub Groovy script will be created at
 
-    ${project.basedir}/src/main/java/<package path>/App.groovy
+    <project root>/src/main/java/<package path>/App.groovy
