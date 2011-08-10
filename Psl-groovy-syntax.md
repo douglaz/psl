@@ -3,6 +3,7 @@
 * Set declaration
 * Rule specification + logical operators + set usage
 * Prior declaration
+* String similarity declaration
 * Constraints -- (Inverse)(Partial)Functional
 * Database creation
 * List representation [], loading into database
