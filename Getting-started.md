@@ -11,4 +11,4 @@ From there you can move on to the following resources:
 2. Learn more about the [[PSL Groovy syntax|psl groovy syntax]].
 3. Learn about the [[PSL core|psl core]].
 
-Questions?  See the [[FAQ | FAQ]] page.
+Questions?  Visit the [[FAQ | FAQ]] page.
