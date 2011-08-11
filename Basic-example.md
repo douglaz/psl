@@ -50,7 +50,7 @@ m.add rule :  (samePerson(A,B) & (A ^ B )) >> sameFriends( {A.knows + A.knows(in
 ````
 For more information on defining rules see [[defining rules]].
 
-### Inference
+### Inferences/Output
 When you are ready, [[run]] BasicExample.groovy.  You should see some output that looks like:
 
 ````
