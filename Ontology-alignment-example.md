@@ -5,4 +5,4 @@ After [[building and installing| building-psl]] the PSL software we are now read
 >> cd <local path to psl-examples>/src/main/java/edu/umd/cs/psl/example  
 ````     
   
-Here, you will find `OntologyAlignment.groovy'. This example gives an instance of using PSL for [[Ontology Alignment | http://en.wikipedia.org/wiki/Ontology_alignment]].  
+Here, you will find `OntologyAlignment.groovy`. This example gives an instance of using PSL for [[Ontology Alignment | http://en.wikipedia.org/wiki/Ontology_alignment]].  
