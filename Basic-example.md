@@ -131,4 +131,4 @@ The first important thing to notice from our output is the set of **samePerson**
 
 The next thing to notice is the learned rule weights that follow the **samePerson** groundings.  Here, we loaded data into the **samePerson** predicate and then learned the optimal weights of our rules.  For more information on running inferences in PSL see [[running inferences]].
 
-Now that you've gone through your first example perhaps you'd like to try [[more examples | More-Example-Programs]].  Otherwise, you can return to [[getting started | Getting-started]] or visit the [[FAQ | FAQ]] page.
+Now that you've gone through your first example perhaps you'd like to try [[more examples | Example-Programs]].  Otherwise, you can return to [[getting started | Getting-started]] or visit the [[FAQ | FAQ]] page.
