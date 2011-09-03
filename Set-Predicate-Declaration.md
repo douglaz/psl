@@ -8,7 +8,7 @@ To declare a predicate with set semantics, use the `add` method of a PSLModel (`
 
 We shall illustrate the use of a set predicate in the context of the following rule: if two papers `P1` and `P2` have the same set of authors, then they are likely the same paper.
 
-`m.add setcomparison: "sameAuthorSet" , using: new AggregateSetEquality(), on : sameAuthor;`
+`model.add setcomparison: "sameAuthorSet" , using: new AggregateSetEquality(), on : sameAuthor;`
 
 `( sameAuthorSet({P1.authorOf(inv)},{P2.authorOf(inv)}) ) >> samePaper(P1,P2)`
 
