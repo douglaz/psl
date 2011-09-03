@@ -3,7 +3,7 @@
 * [[Predicate Declaration | Predicate Declaration]]
 * [[Set Predicate Declaration | Set Predicate Declaration]]
 * [[Rule Specification | Rule Specification]]
-* Prior declaration
+* [[Prior Declaration | Prior Declaration]]
 * String similarity declaration
 * [[Constraints | Constraints in Groovy]] -- (Inverse)(Partial)Functional
 * Database creation
