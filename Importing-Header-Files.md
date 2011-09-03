@@ -1,4 +1,4 @@
-At the top of a groovy file, you must import all the relevant java and groovy files that you wish to use. The list below are the standard set that should be imported.
+At the top of a groovy file, you must import all the relevant java and groovy files that you wish to use. The list below is a standard set that should be imported.
 
 `import edu.umd.cs.psl.groovy.*;` <br/>
 `import edu.umd.cs.psl.database.RDBMS.DatabaseDriver;` <br/>
