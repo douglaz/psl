@@ -5,7 +5,7 @@
 * [[Rule Specification | Rule Specification]]
 * [[Prior Declaration | Prior Declaration]]
 * [[String Similarity Definition and Declaration | String Similarity Definition and Declaration]]
-* [[Constraints | Constraints in Groovy]] -- (Inverse)(Partial)Functional
+* [[Constraints | Constraints]]
 * Database creation
 * List representation [], loading into database
 * Weight learning configs
