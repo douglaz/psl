@@ -2,7 +2,7 @@
 * [[Model Creation | Model Creation]]
 * [[Predicate Declaration | Predicate Declaration]]
 * [[Set Predicate Declaration | Set Predicate Declaration]]
-* Rule specification + logical operators + set usage
+* [[Rule Specification | Rule Specification]]
 * Prior declaration
 * String similarity declaration
 * [[Constraints | Constraints in Groovy]] -- (Inverse)(Partial)Functional
