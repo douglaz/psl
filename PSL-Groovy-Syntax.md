@@ -1,7 +1,7 @@
 * [[Header Files Specification| Header Files Specification]]
 * [[Model Creation | Model Creation]]
 * [[Predicate Declaration | Predicate Declaration]]
-* [[Set declaration | Declaring Sets in Groovy]]
+* [[Set Declaration | Set Declaration]]
 * Rule specification + logical operators + set usage
 * Prior declaration
 * String similarity declaration
