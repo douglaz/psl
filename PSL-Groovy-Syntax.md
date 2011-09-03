@@ -4,7 +4,7 @@
 * [[Set Predicate Declaration | Set Predicate Declaration]]
 * [[Rule Specification | Rule Specification]]
 * [[Prior Declaration | Prior Declaration]]
-* [[String Similarity Declaration | String Similarity Declaration]]
+* [[String Similarity Definition and Declaration | String Similarity Definition and Declaration]]
 * [[Constraints | Constraints in Groovy]] -- (Inverse)(Partial)Functional
 * Database creation
 * List representation [], loading into database
