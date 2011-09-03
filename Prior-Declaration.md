@@ -1,0 +1,1 @@
+The add method of PSLModel (model below) is used to specify a rule.
