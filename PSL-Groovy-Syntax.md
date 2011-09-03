@@ -1,4 +1,4 @@
-* [[Header Files Specification| Header Files]]
+* [[Header Files Specification| Header Files Specification]]
 * [[PSL Model Creation | PSL Model Creation]]
 * [[Predicate Declaration | Predicate Declaration]]
 * [[Set declaration | Declaring Sets in Groovy]]
