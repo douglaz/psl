@@ -1,6 +1,6 @@
 * [[Header Files | Importing Header Files]]
 * [[PSL Model Creation | Creating a PSL Model]]
-* [[Predicate declaration | Declaring Predicates in Groovy]]
+* [[Predicate declaration | Declaring Predicates]]
 * [[Set declaration | Declaring Sets in Groovy]]
 * Rule specification + logical operators + set usage
 * Prior declaration
