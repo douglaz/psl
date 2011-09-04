@@ -7,7 +7,7 @@
 * [[String Similarity Definition and Declaration | String Similarity Definition and Declaration]]
 * [[Constraints | Constraints]]
 * [[Database Creation | Database Creation]]
-* Weight learning configs
+* [[Weight Learning | Weight Learning]]
 * map inference
 * print atoms
 * evaluation code (not sure whether this ready)
