@@ -9,4 +9,3 @@
 * [[Database Creation | Database Creation]]
 * [[Weight Learning | Weight Learning]]
 * [[MAP Inference | MAP Inference]]
-<!--* evaluation code (not sure whether this ready)-->
