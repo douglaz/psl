@@ -6,4 +6,4 @@ To perform maximum a posteriori (MAP) inference, use the `mapInference` method o
 * `<outputPartitionID>` is an integer ID of the partition that is to be used to store inferred truth values
 * `<evidencePartitionID>` is the partitionID storing evidence ground atoms
 
-The inferred truth values can be printed using `result.printAtoms(<predicateName>, true>`, which prints grounding atoms of `<predicateName>` with truth values larger than 0.0.
+The inferred truth values can be printed using `result.printAtoms(<predicateName>, true)`, which prints ground atoms of `<predicateName>` with truth values larger than 0.0.
