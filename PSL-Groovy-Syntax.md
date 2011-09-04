@@ -6,7 +6,7 @@
 * [[Prior Declaration | Prior Declaration]]
 * [[String Similarity Definition and Declaration | String Similarity Definition and Declaration]]
 * [[Constraints | Constraints]]
-* Database creation
+* [[Database Creation | Database Creation]]
 * List representation [], loading into database
 * Weight learning configs
 * map inference
