@@ -10,7 +10,7 @@ The parameters are:
 * `config.setParameterPrior(1);` // = 1/variance, where variance is that of the Gaussian prior over the weights.
 * `config.setRuleMean(1);` //mean of Gaussian prior over the rule weights
 * `config.setUnitRuleMean(1);` //mean of Gaussian of prior rules (i.e., prior on the query predicates)
-* `config.setActivationThreshold(1e-10);` //activation threshold of ground atoms (below this threshold, consider the atom to be false). The smaller the value, the larger the number of atoms activated, the larger the memory consumption, the longer inference and weight learning run.
+* `config.setActivationThreshold(1e-10);` //activation threshold of ground atoms (below this threshold, consider the atom to be false). The smaller the value, the larger the number of atoms activated, the larger the memory consumption, the longer inference and weight learning take to run.
 
 To run weight learning use the `learn` method of `PSLModel`:
 
