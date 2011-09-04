@@ -15,7 +15,28 @@ After a `DataStore` is created, we can read in the truth values of ground atoms 
 
 By default, the ground atoms and their truth values are read into partition 1 of `DataStore`. The query predicates whose values are to be inferred should be read into another partition by a specifying partition ID as an argument: `data.getInserter(<predicateName>, <partionID>)`
 
-The following code snippet shows how to read `BooleanTruth` 
+The following code snippet shows how to read in `BooleanTruth` and `SoftTruth` evidence ground atoms and `SoftTruth` query atoms.
+
+`for (Predicate p : [<predicateName1>, <predicateName2>, ...])`<br/>
+`{`<br/>
+&nbsp;&nbsp;`insert = data.getInserter(p);`<br/>
+&nbsp;&nbsp;`insert.loadFromFile(p.getName()+".txt");`<br/> //<predicateName> atoms are stored in <predicateName1>.txt
+`}`<br/>
+
+for (Predicate p2 : [simName, simTitle])
+{
+  println "\tREADING " + dir + p2.getName() +".txt" + fold + " ...";
+  insert = data.getInserter(p2);
+  insert.loadFromFileWithTruth(dir+p2.getName()+".txt"+fold);
+}
+
+for (Predicate q : [sameAuthor,samePaper])
+{
+   println "\tREADING " + dir+q.getName() +".txt" + fold + " ...";
+   insert = data.getInserter(q,2);
+   insert.loadFromFileWithTruth(dir+q.getName()+".txt"+fold,"\t");
+}
+
 
 
 
