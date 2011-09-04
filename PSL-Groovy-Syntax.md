@@ -8,6 +8,5 @@
 * [[Constraints | Constraints]]
 * [[Database Creation | Database Creation]]
 * [[Weight Learning | Weight Learning]]
-* map inference
-* print atoms
-* evaluation code (not sure whether this ready)
+* [[MAP Inference | MAP Inference]]
+<!--* evaluation code (not sure whether this ready)-->
