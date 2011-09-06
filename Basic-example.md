@@ -32,7 +32,7 @@ See [[defining predicate types]] for information on defining predicate types.  T
 m.add function: "sameName" , name1: Text, name2: Text, implementation: new LevensteinStringSimilarity()
 ```
 
-See [[defining functions]] for information on defining functions.  For the purposes of our example, **sameName** is a function that simply a function that maps a pair of entities to 1 if their  are identical and 0 otherwise.  In addition to the above predicates and function, we also define the following rules which are written both with pseudo code and their corresponding PSL syntax below.  For information on writing rules using PSL's syntax please see [[writing rules]].      
+See [[defining functions]] for information on defining functions.  For the purposes of our example, **sameName** is a function that maps a pair of entities to 1 if their names are identical and 0 otherwise.  In addition to the above predicates and function, we also define the following rules which are written both with pseudo code and their corresponding PSL syntax below.  For information on writing rules using PSL's syntax please see [[writing rules]].      
 ### Rules
 - **IF** ( name(A,X) **AND** name(B,Y) **AND** (A != B) **AND** sameName(X,Y) ) **THEN** samePerson(A,B)
 
