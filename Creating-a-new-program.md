@@ -1,7 +1,7 @@
 After [[installing PSL|building psl]], execute the following command:
 
 ```
-mvn archetype:generate -DarchetypeArtifactId=psl-archetype-groovy \
+>> mvn archetype:generate -DarchetypeArtifactId=psl-archetype-groovy \
 -DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=<PSL version number>
 ```
 
