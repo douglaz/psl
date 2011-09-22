@@ -1,11 +1,12 @@
-After [[installing PSL|building psl]], execute the following command:
+After ensuring that the [[prerequisites]] are installed, execute the following command:
 
 ```
 >> mvn archetype:generate -DarchetypeArtifactId=psl-archetype-groovy \
+-DremoteRepositories=https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/ \
 -DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=<PSL version number>
 ```
 
-where \<PSL version number\> is replaced with your PSL [[version|versions]].
+where \<PSL version number\> is replaced with the PSL [[version|versions]] you want to use.
 
 The [[Maven|http://maven.apache.org]] [[archetype plugin|http://maven.apache.org/archetype/maven-archetype-plugin/]] will then create a new project in which you can write PSL programs. The project will be configured to use the Maven project-management tool. You should be prompted for an a group ID (a Maven project namespace, just like a Java package), artifact ID (project name), and a version number for your project, as well as a name for the first Java package to create, which defaults to the specified group ID.
 
