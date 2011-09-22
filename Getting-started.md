@@ -2,6 +2,7 @@ Follow these steps to get started with the PSL software:
 
 1. Read the [[introduction to probabilistic soft logic]].
 2. [[Build and/or install|installing psl]] the PSL software.
+2. Install the [[prerequisites]].
 3. Go through an [[example program|Basic example]].
 4. Create a [[new program|creating a new program]].
 
