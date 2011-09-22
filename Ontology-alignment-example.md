@@ -1,5 +1,4 @@
-After [[building and installing| building-psl]] the PSL software we are now ready to run an example PSL program.  PSL examples are found in the psl-examples package.  Inside this package you will find the ```OntologyAlignment.groovy``` example.  First, navigate to the parent directory of the `OntologyAlignment.groovy` example:  
-  
+After ensuring that the [[prerequisites]] and [[examples|install examples]] are installed, change to the directory containing the project of examples. Inside this package you will find the ```OntologyAlignment.groovy``` example.  First, navigate to the parent directory of the `OntologyAlignment.groovy` example:  
 
 ````
 >> cd <local path to psl-examples>/src/main/java/edu/umd/cs/psl/example  
