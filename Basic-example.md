@@ -10,7 +10,7 @@ Then execute the following command:
 
 where \<PSL version number\> is replaced with the PSL [[version|versions]] you want to use.
 
-The [[Maven|http://maven.apache.org]] [[archetype plugin|http://maven.apache.org/archetype/maven-archetype-plugin/]] will then create a new project of PSL examples. The project will be configured to use the Maven project-management tool. The PSL libraries will be downloaded automatically when you use Maven to compile and run this project.
+The [[Maven|http://maven.apache.org]] [[archetype plugin|http://maven.apache.org/archetype/maven-archetype-plugin/]] will then create a new project of PSL examples. The project will be configured to use the Maven project-management tool. The PSL libraries will be downloaded automatically (if necessary) when you use Maven to compile and run this project.
 
 Inside this project you will find the ```BasicExample.groovy``` example.  First, navigate to the parent directory of the `BasicExample.groovy` example:  
 
