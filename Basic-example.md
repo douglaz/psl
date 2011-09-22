@@ -1,11 +1,24 @@
-After [[building and installing| building-psl]] the PSL software we are now ready to run an example PSL program.  PSL examples are found in the psl-examples package.  Inside this package you will find the ```BasicExample.groovy``` example.  First, navigate to the parent directory of the `BasicExample.groovy` example:  
-  
+After ensuring that the [[prerequisites]] are installed, users can run some example programs. To set up the examples, change to the directory in which you want to create the program directory.
+
+Then execute the following command:
+
+```
+>> mvn archetype:generate -DarchetypeArtifactId=psl-archetype-example \
+-DremoteRepositories=https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/ \
+-DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=<PSL version number>
+```
+
+where \<PSL version number\> is replaced with the PSL [[version|versions]] you want to use.
+
+The [[Maven|http://maven.apache.org]] [[archetype plugin|http://maven.apache.org/archetype/maven-archetype-plugin/]] will then create a new project of PSL examples. The project will be configured to use the Maven project-management tool. The PSL libraries will be downloaded automatically when you use Maven to compile and run this project.
+
+Inside this project you will find the ```BasicExample.groovy``` example.  First, navigate to the parent directory of the `BasicExample.groovy` example:  
 
 ````
->> cd <local path to psl-examples>/src/main/java/edu/umd/cs/psl/example  
+>> cd psl-example/src/main/java/edu/umd/cs/psl/example  
 ````     
   
-Here, you will find `BasicExample.groovy`.  This file provides an example of using the groovy PSL syntax for defining predicates and rules, loading predicate data, running basic inferences, and learning rule weights.  'BasicExample.groovy' defines 4 simple predicates:
+Here, you will find `BasicExample.groovy`.  This file provides an example of using the Groovy PSL syntax for defining predicates and rules, loading predicate data, running basic inferences, and learning rule weights.  'BasicExample.groovy' defines 4 simple predicates:
 ### Predicates
 
 - **name**
