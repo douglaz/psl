@@ -1,6 +1,6 @@
 After ensuring that the [[prerequisites]] are installed, users can run some example programs. 
 
-To set up the examples, change to the directory in which you want to create the directory of examples.
+To set up the examples, change to the directory in which you want to create the project of examples.
 
 Then execute the following command:
 
