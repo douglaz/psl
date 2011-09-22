@@ -23,3 +23,5 @@ You can place Java and Groovy source files in
 A stub Groovy script will be created at
 
     <project root>/src/main/java/<package path>/App.groovy
+
+which you can [[run|running a program]].
