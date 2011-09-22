@@ -4,7 +4,7 @@ Follow these steps to get started with the PSL software:
 2. Install the [[prerequisites]].
 3. [[Install some example programs | Install examples]].
 4. Go through an [[example program|Basic example]].
-5. Create a [[new program|creating a new program]].
+5. Create a [[new project|creating a new project]].
 
 From there you can move on to the following resources:
 
