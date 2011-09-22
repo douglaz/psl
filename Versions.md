@@ -1,0 +1,1 @@
+The latest stable version of the PSL software is 1.0
