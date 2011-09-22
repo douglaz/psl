@@ -1,8 +1,8 @@
-After [[building and installing| building-psl]] the PSL software we are now ready to run an example PSL program.  PSL examples are found in the psl-examples package.  Inside this package you will find the `ExternalFunctionExample.groovy` example.  First, navigate to the parent directory of the `ExternalFunctionExample.groovy` example:  
+After ensuring that the [[prerequisites]] and [[examples|install examples]] are installed, change to the directory containing the project of examples. Inside this project you will find the `ExternalFunctionExample.groovy` example.  First, navigate to the parent directory of the `ExternalFunctionExample.groovy` example:  
   
 
 ````
->> cd <local path to psl-examples>/src/main/java/edu/umd/cs/psl/example/external  
+>> cd psl-example/src/main/java/edu/umd/cs/psl/example/external  
 ````     
   
-Here, you will find `ExternalFunctionExample.groovy`.  This example provides an instance of calling an external Java [[function]] from within the [[groovy psl | Psl-groovy-syntax]] syntax.  
+Here, you will find `ExternalFunctionExample.groovy`.  This example provides an instance of calling an external Java [[function]] from within the [[Groovy PSL | Psl-groovy-syntax]] syntax.  
