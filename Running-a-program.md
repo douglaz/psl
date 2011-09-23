@@ -29,7 +29,7 @@ where \<fully qualified class name\> is the full name (package and class) of the
 * Classes can also be run with the command
 
 ```
-mvn exec:java -Dexec.mainClass=<fully qualified class name>
+>> mvn exec:java -Dexec.mainClass=<fully qualified class name>
 ```
 
 The advantages are that the project does not need to be compiled separately and the classpath does not need to be generated or updated separately. The disadvantages are that the class output is preceded and succeeded by Maven output, exception stack traces are not printed by default (add the `-e` switch), and Maven adds some overhead to execution (sometimes a significant amount, especially on less powerful machines).
