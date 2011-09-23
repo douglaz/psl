@@ -9,14 +9,14 @@ Ensure that you have version 3.6 (Helios) or 3.7 (Indigo) of Eclipse installed. 
 
 You need to add a classpath variable in Eclipse to point to your local Maven repository. You can access the variables either from the main options or from the build-path editor for any project. Where you specify additional libs, make a new variable (there should be a button) with the name `M2_REPO` and the path to your repo (e.g., `~/.m2/repository`).
 
-### Generating Eclipse metadata
+### Generating and importing Eclipse metadata
 In the top-level directory of your PSL project, run
 
 ```
 >> mvn eclipse:eclipse
 ```
 
-Then in Eclipse, go to File/Import/General/<Something like 'Existing Project'>. Select the top-level directory of your project. You probably don't want to copy it into the workspace, so uncheck that option.
+Then in Eclipse, go to File/Import/General/\<something like 'Existing Project'\>. Select the top-level directory of your project. You probably don't want to copy it into the workspace, so uncheck that option.
 
 If you want to delete the Eclipse metadata for any reason, run
 
