@@ -1,8 +1,4 @@
-[Eclipse](http://www.eclipse.org) is an extensible, integrated development environment that can be used to develop PSL and PSL projects.
-
-### Overview
-
-The recommended way of using Eclipse with PSL is to use the [Eclipse plugin for Maven](http://maven.apache.org/plugins/maven-eclipse-plugin/) to generate Eclipse project information for a PSL project and then import that project into Eclipse.
+[Eclipse](http://www.eclipse.org) is an extensible, integrated development environment that can be used to develop PSL and PSL projects. The recommended way of using Eclipse with PSL is to use the [Eclipse plugin for Maven](http://maven.apache.org/plugins/maven-eclipse-plugin/) to generate Eclipse project information for a PSL project and then import that project into Eclipse.
 
 ### Prerequisites
 Ensure that you have version 3.6 (Helios) or 3.7 (Indigo) of Eclipse installed. Then, install the [Groovy Eclipse plugin](http://groovy.codehaus.org/Eclipse+Plugin) and the optional 1.8 version of the Groovy compiler, which is available when installing the plugin. The version 1.8 compiler is what [Maven will use](http://groovy.codehaus.org/Groovy-Eclipse+compiler+plugin+for+Maven) to compile the Groovy scripts, so builds done by either tool should be interchangeable. If you use an older version, Eclipse will probably recompile some files which then won't be compatible with the rest, and it won't run. (Cleaning and rebuilding everything should help.)
