@@ -10,7 +10,7 @@ From there you can move on to the following resources:
 
 1. Go through [[more example programs|Example-Programs]].
 2. Learn more about the [[PSL Groovy syntax|psl groovy syntax]].
-3. [[Build PSL]] from the source code.
+3. [[Build PSL | Building PSL]] from the source code.
 4. Learn about the [[PSL core|psl core]].
 
 Questions?  Visit the [[FAQ | FAQ]] page.
