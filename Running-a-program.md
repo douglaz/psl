@@ -20,7 +20,7 @@ You can now run a class with the command
 >> java -cp ./target/classes:`cat <classpath file>` <fully qualified class name>
 ```
 
-where \<fully qualified class name\> is the full name (package and class) of the class you want to run (e.g., edu.umd.cs.psl.example.BasicExample).
+where \<fully qualified class name\> is the full name (package and class) of the class you want to run (e.g., edu.umd.cs.example.BasicExample).
 
 **Tips and troubleshooting**
 
