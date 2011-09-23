@@ -18,13 +18,13 @@ In the top-level directory of your PSL project, run
 
 Then in Eclipse, go to File/Import/General/\<something like 'Existing Project'\>. Select the top-level directory of your project. You probably don't want to copy it into the workspace, so uncheck that option.
 
-If you want to delete the Eclipse metadata for any reason, run
+**Tips**
+
+* If you want to delete the Eclipse metadata for any reason, run
 
 ```
 >> mvn eclipse:clean
 ```
-
-**Tips**
 
 * If you want to generate metadata for a project that depends on another project you're developing with Eclipse (PSL or not), run
 
