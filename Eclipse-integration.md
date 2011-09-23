@@ -32,6 +32,6 @@ If you want to delete the Eclipse metadata for any reason, run
 >> mvn eclipse:eclipse -Declipse.workspace=<path to Eclipse workspace>
 ```
 
-The Eclipse plugin for Maven will look in the provided workspace for any projects that match dependencies declared in your project's POM file. Your project will be configured to depend on any such projects found as opposed to their respective installed jars. This way, changes to the sources of those dependencies will be seen by your project without reinstalling the dependencies.
+The Eclipse plugin for Maven will look in the provided workspace for any projects that match dependencies declared in your project's POM file. Your project will be configured to depend on any such projects found as opposed to their respective installed jars. This way, changes to the sources of those dependencies will be seen by your project without reinstalling the dependencies. Note that this works even for dependencies that were imported but not copied into the workspace.
 
 * The [m2eclipse Eclipse plugin](http://www.eclipse.org/m2e/) is another option for developing PSL projects with Eclipse. It differs from the recommended method in that it is an Eclipse plugin designed to support Maven projects, as opposed to a Maven plugin designed to support Eclipse.
