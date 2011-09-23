@@ -1,7 +1,7 @@
 After ensuring that the [[prerequisites]] and [[examples|install examples]] are installed, change to the directory containing the project of examples. Inside this project you will find the ```BasicExample.groovy``` example.  First, navigate to the parent directory of the `BasicExample.groovy` example:  
 
 ````
->> cd psl-example/src/main/java/edu/umd/cs/psl/example  
+>> cd psl-example/src/main/java/edu/umd/cs/example  
 ````     
   
 Here, you will find `BasicExample.groovy`.  This file provides an example of using the Groovy PSL syntax for defining predicates and rules, loading predicate data, running basic inferences, and learning rule weights.  'BasicExample.groovy' defines 4 simple predicates:
