@@ -1,0 +1,25 @@
+Welcome to the wiki for the PSL software from the University of Maryland. The PSL software is an implementation of [[probabilistic soft logic]].
+
+Visit the [[getting started]] guide to use the PSL software.
+
+[[FAQ]]
+
+== Table of Contents ==
+
+* [[Getting Started]]
+** [[Introduction to probabilistic soft logic]]
+** Installation [[prerequisites]]
+** [[Install examples]]
+** Going through a [[basic example]]
+** [[Creating a new project]]
+* Advanced set up
+** [[Configuration]]
+** [[Building PSL]] from source code
+** [[Add ons]]
+*** [[MOSEK add on]]
+* [[Example programs]]
+** [[Basic example]]
+** [[Ontology alignment example]]
+** [[External functions example]]
+* [[PSL Groovy syntax]]
+* [[PSL core]]
