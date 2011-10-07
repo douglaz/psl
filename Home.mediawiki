@@ -8,9 +8,9 @@ Visit the [[getting started]] guide to use the PSL software.
 
 * Getting Started
 ** [[Introduction to probabilistic soft logic]]
-** Installation [[prerequisites]]
+** [[prerequisites | Installation prerequisites]]
 ** [[Installing examples]]
-** Going through a [[basic example]]
+** [[basic example | Going through a basic example]]
 ** [[Creating a new project]]
 
 * Advanced set up
@@ -33,6 +33,6 @@ Visit the [[getting started]] guide to use the PSL software.
 ** [[PSL Groovy syntax]]
 
 * Development
-** [[Building PSL]] from source code
+** [[Building PSL | Building PSL from source code]]
 ** [[PSL core]]
 ** [[Git policies]]
