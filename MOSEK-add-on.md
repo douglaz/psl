@@ -6,14 +6,14 @@ First, install MOSEK 6. In addition to a commercial version for which a 30-day t
 
 After installing MOSEK, install the included `mosek.jar` file to your local Maven repository. (This file should be in `<mosek-root>/6/tools/platform/<your-platform>/bin`.)
 
-```sh
+```
 >> mvn install:install-file -Dfile=<path-to-mosek.jar> -DgroupId=com.mosek \
     -DartifactId=mosek -Dversion=6.0 -Dpackaging=jar
 ```
 
 Next, add the following dependency to your project's `pom.xml` file:
 
-```pom
+```xml
 <dependencies>
     ...
     <dependency>
