@@ -6,20 +6,33 @@ Visit the [[getting started]] guide to use the PSL software.
 
 == Table of Contents ==
 
-* [[Getting Started]]
+* Getting Started
 ** [[Introduction to probabilistic soft logic]]
 ** Installation [[prerequisites]]
-** [[Install examples]]
+** [[Installing examples]]
 ** Going through a [[basic example]]
 ** [[Creating a new project]]
+
 * Advanced set up
 ** [[Configuration]]
-** [[Building PSL]] from source code
+** [[Eclipse integration]]
 ** [[Add ons]]
 *** [[MOSEK add on]]
-* [[Example programs]]
+
+* Example programs
 ** [[Basic example]]
 ** [[Ontology alignment example]]
 ** [[External functions example]]
-* [[PSL Groovy syntax]]
-* [[PSL core]]
+
+* Versioning
+** [[Versions]]
+** [[Changing versions]]
+** [[Change log]]
+
+* Groovy PSL
+** [[PSL Groovy syntax]]
+
+* Development
+** [[Building PSL]] from source code
+** [[PSL core]]
+** [[Git policies]]
