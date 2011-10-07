@@ -1,4 +1,4 @@
-To change the [[version|versions]] of PSL your project uses, edit your project's `pom.xml` file. The POM will declare dependencies on one or more PSL modules, e.g.,
+To change the [[version|versions]] of PSL your project uses, edit your project's `pom.xml` file. The POM will declare dependencies on one or more PSL artifacts, e.g.,
 
 ```xml
 <dependencies>
