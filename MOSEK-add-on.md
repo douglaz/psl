@@ -33,4 +33,4 @@ Finally, it might be necessary to rebuild your project.
 
 After installing the MOSEK add on, you can use it where ever a `ConicProgramSolver` is used. To use it for inference with a `ConicReasoner` set the `conicreasoner.conicprogramsolver` [[configuration]] property to `edu.umd.cs.psl.optimizer.conic.mosek.MOSEKFactory`.
 
-Further, MOSEK requires that two environment variables be set when running. The same `bin` directory where you found `mosek.jar` needs to be on the path for shared libraries. The environment variable `MOSEKLM_LICENSE_FILE` needs to be set to the path to your license file (usually `<mosek-root>/6/licenses/mosek.lic`.
+Further, MOSEK requires that two environment variables be set when running. The same `bin` directory where you found `mosek.jar` needs to be on the path for shared libraries. The environment variable `MOSEKLM_LICENSE_FILE` needs to be set to the path to your license file (usually `<mosek-root>/6/licenses/mosek.lic`).
