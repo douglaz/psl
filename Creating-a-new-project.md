@@ -1,6 +1,6 @@
 After ensuring that the [[prerequisites]] are installed, execute the following command:
 
-```
+```sh
 >> mvn archetype:generate -DarchetypeArtifactId=psl-archetype-groovy \
 -DarchetypeRepository=https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/ \
 -DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=<PSL version number>
