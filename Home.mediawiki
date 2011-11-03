@@ -12,6 +12,7 @@ Visit the [[getting started]] guide to use the PSL software.
 ** [[Installing examples]]
 ** [[basic example | Going through a basic example]]
 ** [[Creating a new project]]
+** [[Running a program]]
 
 * Advanced set up
 ** [[Configuration]]
