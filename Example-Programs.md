@@ -5,3 +5,5 @@ After ensuring that the [[prerequisites]] and [[examples|install examples]] are 
 2. [[Ontology Alignment Example | Ontology-Alignment-Example]]
 
 3. [[External Functions Example | External-Functions-Example]]
+
+4. [[ER Example | ER-Example]]
