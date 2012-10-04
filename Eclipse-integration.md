@@ -6,7 +6,7 @@ Ensure that you have version 3.6 (Helios) or 3.7 (Indigo) of Eclipse installed. 
 You need to add a classpath variable in Eclipse to point to your local Maven repository. You can access the variables either from the main options or from the build-path editor for any project. Where you specify additional libs, make a new variable (there should be a button) with the name `M2_REPO` and the path to your repo (e.g., `~/.m2/repository`). This can also be achieved automatically via the following Maven command:
 
 ```
-mvn -Declipse.workspace="your Eclipse Workspace" eclipse:configure-workspace
+mvn -Declipse.workspace=/path/to/workspace eclipse:configure-workspace
 ```
 
 ### Generating and importing Eclipse metadata
