@@ -26,3 +26,6 @@ sql.eachRow('Select * from Person') {
     persons << it.toRowResult()
 }
 ```
+
+### Translating from a Database to ground PSL predicates
+_The following makes reference to [PSL Database creation](https://github.com/linqs/psl/wiki/Database-creation)_
