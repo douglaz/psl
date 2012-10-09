@@ -18,3 +18,11 @@ so for a local database called _groovydb_ listening on port _2020_ with user _us
 def sql = Sql.newInstance("jdbc:mysql://localhost:2020/groovydb", 'usr','pass', "com.mysql.jdbc.Driver")
 
 ```
+
+If database tables shard a 1:1 mapping with PSL tuples, the following would pull each row entry from the table _Persons_
+```sql_run
+def persons = []
+sql.eachRow('Select * from Person') {
+    persons << it.toRowResult()
+}
+```
