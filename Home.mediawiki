@@ -17,6 +17,7 @@ Visit the [[getting started]] guide to use the PSL software.
 * Advanced set up
 ** [[Configuration]]
 ** [[Eclipse integration]]
+** [[Connecting to an existing database]]
 ** Add ons
 *** [[MOSEK add on]]
 
