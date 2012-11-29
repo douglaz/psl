@@ -16,6 +16,20 @@ The [Git website](http://git-scm.com/) has information on installing Git, as do 
 
 Once Git is installed and you're ready to use it, you can run the above command to clone the PSL repository.
 
+### Checking out branches which track remote branches
+
+To use an existing branch in the remote repo on GitHub, create a tracking branch to track it. It can be kept in sync via ```git pull```. For example to track the branch 'develop' (assuming the GitHub repo is named 'origin') run
+
+```
+>> git branch --track develop origin/develop
+```
+
+then
+
+```
+>> git checkout develop
+```
+
 ### Preparing for pushing commits to the PSL repository or a fork on GitHub
 
 Create a free account on [GitHub](https://github.com). Then follow one of the following sets of instructions to set up Git and GitHub:
