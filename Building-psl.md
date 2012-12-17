@@ -2,7 +2,15 @@ The PSL source code is [publicly available](https://github.com/linqs/psl/) and h
 
 ### Quick start
 
-If you are already comfortable using [Git](http://git-scm.com/) and you don't want or need to push commits to GitHub, then you can just clone the PSL repository with
+If you are already comfortable using [Git](http://git-scm.com/) and you don't want or need to push commits to GitHub, then you can just clone the PSL repository.
+
+For read-only access:
+
+```
+>> git clone git://github.com/linqs/psl.git
+```
+
+For read-write access:
 
 ```
 >> git clone git@github.com:linqs/psl.git
