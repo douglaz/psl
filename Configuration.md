@@ -1,7 +1,5 @@
 Many components of the PSL software have modifiable parameters and options, called properties. Every property has a key, which is a string that should uniquely identify it. These keys are organized into a namespace hierarchy, with each level separated by dots, e.g., `conicreasoner.distribution` is the type of probability distribution used by the `edu.umd.cs.psl.reasoner.ConicReasoner` class. Every property has a type and a default value, which is the value the object will use unless a user overrides it. Every class with properties documents them by declaring their keys as public static final Strings, with Javadoc describing the corresponding property's type and semantics. Another public static final member declares the default value for that property.
 
-_Note: Currently, some classes still use an older configuration system and are being converted to use the system described here. It should be obvious from a class's constructors and documentation which one it uses (if any)._
-
 ### Bundles
 
 Users of the PSL software can specify property values by grouping them into bundles, which are objects that implement the `edu.umd.cs.psl.config.ConfigBundle` interface. Every bundle has a name and a map from property keys to values. A configurable component takes a `ConfigBundle` as an argument in its constructor and queries it with a property key and a default value. If the bundle does not map the key to a value, it returns the provided default.
