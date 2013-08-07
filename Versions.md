@@ -1,4 +1,4 @@
-The latest stable version of the PSL software is 1.0.2 (https://github.com/linqs/psl/tree/1.0.2)
+The latest stable version of the PSL software is 1.1 (https://github.com/linqs/psl/tree/1.1)
 
 [[Changing versions]]
 
