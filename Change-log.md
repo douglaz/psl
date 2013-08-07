@@ -1,3 +1,12 @@
+Version 1.1 (https://github.com/linqs/psl/tree/1.1)
+
+* An improved Groovy interface. Try the new examples via https://github.com/linqs/psl/wiki/Installing-examples to learn the new interface.
+* New, improved psl-core architecture
+* Much faster inference based on the alternating direction method of multipliers (ADMM).
+* Improved max-likelihood weight learning
+* New max-pseudolikelihood and large-margin weight learning
+* Many bug fixes and minor improvements.
+
 Version 1.0.2 (https://github.com/linqs/psl/tree/1.0.2)
 
 * Fixed bugs in HomogeneousIPM and MOSEK add-on caused by bug in parallel colt when using selections from large, sparse matrices.
