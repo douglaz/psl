@@ -1,4 +1,4 @@
-After ensuring that the [[prerequisites]] and [[examples|install examples]] are installed, change to the directory containing the project of examples. Inside this project you will find the ```BasicExample.groovy``` example.  First, navigate to the parent directory of the `BasicExample.groovy` example:  
+After ensuring that the [[prerequisites]] and [[examples|installing examples]] are installed, change to the directory containing the project of examples. Inside this project you will find the ```BasicExample.groovy``` example.  First, navigate to the parent directory of the `BasicExample.groovy` example:  
 
 ````
 >> cd psl-example/src/main/java/edu/umd/cs/example  
