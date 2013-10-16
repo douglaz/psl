@@ -1,4 +1,4 @@
-After ensuring that the [[prerequisites]] and [[examples|install examples]] are installed, you can [[run | Running a program]] the following example programs:
+After ensuring that the [[prerequisites]] and [[examples|installing examples]] are installed, you can [[run | Running a program]] the following example programs:
 
 1. [[Basic Example | Basic-example]]
 
