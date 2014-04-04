@@ -9,15 +9,31 @@ Compile your project:
 Now use Maven to generate a classpath for your project's dependencies:
 
 ```
->> mvn dependency:build-classpath -Dmdep.outputFile=<classpath file>
+>> mvn dependency:build-classpath -Dmdep.outputFile=classpath.out
 ```
 
-where \<classpath file\> is replaced with a file in which you will store classpath information.
+**Linux or OS X**
 
 You can now run a class with the command
 
 ```
->> java -cp ./target/classes:`cat <classpath file>` <fully qualified class name>
+>> java -cp ./target/classes:`cat classpath.out` <fully qualified class name>
+```
+
+where \<fully qualified class name\> is the full name (package and class) of the class you want to run (e.g., edu.umd.cs.example.BasicExample).
+
+**Windows**
+
+First set an environment variable to the contents of classpath.out.
+
+```
+>> set /p PSL_CLASSPATH=<classpath.out
+```
+
+You can now run a class with the command
+
+```
+>> java -cp ./target/classes:%PSL_CLASSPATH% <fully qualified class name>
 ```
 
 where \<fully qualified class name\> is the full name (package and class) of the class you want to run (e.g., edu.umd.cs.example.BasicExample).
