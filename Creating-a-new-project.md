@@ -27,3 +27,7 @@ A stub Groovy script will be created at
     <project root>/src/main/java/<package path>/App.groovy
 
 which you can [[run|running a program]].
+
+**Tips and troubleshooting**
+
+* The Windows shell (CMD.EXE) doesn't accept line continuations ('\'), so remove those and enter the command all on one line.
