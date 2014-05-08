@@ -61,3 +61,7 @@ You can install PSL to your local Maven repository by running
 ```
 >> mvn install
 ```
+
+### Updating your Projects
+
+Remember to update your project's `pom.xml` file with the (possibly) new version you installed.
