@@ -16,6 +16,7 @@ Visit the [[getting started]] guide to use the PSL software.
 
 * Advanced set up
 ** [[Configuration]]
+** [[Logging]]
 ** [[Eclipse integration]]
 ** [[Connecting to an existing database]]
 ** Add ons
