@@ -3,6 +3,8 @@
 ### Prerequisites
 Ensure that you have version 3.6 (Helios) or higher of Eclipse installed. Then, install the [Groovy Eclipse plugin](http://groovy.codehaus.org/Eclipse+Plugin) and the optional 1.8 version of the Groovy compiler, which is available when installing the plugin. The version 1.8 compiler is what [Maven will use](http://groovy.codehaus.org/Groovy-Eclipse+compiler+plugin+for+Maven) to compile the Groovy scripts, so builds done by either tool should be interchangeable. If you use an older version, Eclipse will probably recompile some files which then won't be compatible with the rest, and it won't run. (Cleaning and rebuilding everything should help.)
 
+You might have to change the Groovy compiler version to 1.8.x in your Groovy compiler preferences (part of the Eclipse preferences).
+
 You need to add a classpath variable in Eclipse to point to your local Maven repository. You can access the variables either from the main options or from the build-path editor for any project. Where you specify additional libs, make a new variable (there should be a button) with the name `M2_REPO` and the path to your repo (e.g., `~/.m2/repository`). This can also be achieved automatically via the following Maven command:
 
 ```
