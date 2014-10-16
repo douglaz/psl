@@ -103,4 +103,7 @@ Started x.y.z-SNAPSHOT
 Push your commit when finished.
 
 ## Tag the New Stable Version
-
+```
+>> git tag -a x.y.z -m 'Version x.y.z'
+>> git push origin x.y.z
+``
