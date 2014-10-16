@@ -3,6 +3,12 @@
 ### Get the Code Ready
 A release is a single commit that increments the software's version number and does nothing else. So, before you release a version, make sure all your changes are committed and pushed, and the code is in the state in which you want to release it.
 
+### Test the Code
+Remember to test the code and double check it is ready for release. Make sure there are no errors or bugs.
+
+1. Install the code. (Run `mvn install`.)
+1. [[Install and run the examples | Installing examples]].
+
 ### Find the New Version Number
 Version numbers are of the format x.y.z, where
 
@@ -20,5 +26,13 @@ The following list is all the occurrences of the version number in the PSL code 
 1. `pom.xml`
 1. `psl-addon/pom.xml`
 1. `psl-addon/psl-addon-mosek/pom.xml`
-
+1. `psl-archetype/pom.xml`
+1. `psl-archetype/psl-archetype-example/pom.xml`
+1. `psl-archetype/psl-archetype-example/src/main/resources/META-INF/maven/archetype-metadata.xml`
+1. `psl-archetype/psl-archetype-example/src/main/resources/archetype-resources/pom.xml`
+1. `psl-archetype/psl-archetype-groovy/pom.xml`
+1. `psl-archetype/psl-archetype-groovy/src/main/resources/archetype-resources/pom.xml`
+1. `psl-core/pom.xml`
+1. `psl-groovy/pom.xml`
+1. `psl-parser/pom.xml`
 
