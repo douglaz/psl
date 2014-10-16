@@ -108,4 +108,6 @@ Push your commit when finished.
 >> git push origin x.y.z
 ```
 
+## Update Git Branches
+
 # Deploy New Stable Version to Maven Repo
