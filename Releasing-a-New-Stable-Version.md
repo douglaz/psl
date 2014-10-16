@@ -94,7 +94,7 @@ echo "Does the above say 23 lines added and deleted? IF NOT, SOMETHING WENT WRON
 
 Commit the changes with one of the following commit messages.
 
-If you are changing to a stable version with a patch version, use:
+If you are changing to a stable version, use:
 ```
 Version x.y.z
 ```
@@ -107,6 +107,7 @@ Started x.y.z-SNAPSHOT
 Push your commit when finished.
 
 ## Tag the New Stable Version
+Run the following two commands:
 ```
 >> git tag -a x.y.z -m 'Version x.y.z'
 >> git push origin x.y.z
