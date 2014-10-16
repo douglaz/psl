@@ -115,4 +115,31 @@ Run the following two commands:
 
 ## Update Git Branches
 
+There are two ways the branch structure of the Git repo might change because of a new stable version:
+
+1. The master branch might need to be updated
+1. A working branch might need to be deleted
+
+### Updating the Master Branch
+
+The Master branch should always point to the commit of the highest stable version number, where x, y, and z are treated as separate orders of magnitude.
+
+So, if the master branch points to version 1.2, then releasing 1.1.1 would not update the master branch, but releasing 1.2.1 or 1.3 would.
+
+If the master branch is upstream of the new stable version. This makes it easy. Simply run the following commands:
+**TODO: TEST THIS**
+
+```
+>> git checkout master
+>> git pull x.y.z
+>> git push
+```
+
+This will advance the master branch. If, however, the master branch is not upstream,
+**TODO: WRITE THIS AND TEST IT**
+
+### Deleting a working branch
+
+
+
 # Deploy New Stable Version to Maven Repo
