@@ -21,7 +21,7 @@ The git branch the code is on should already have a version number in its `pom.x
 # Changing the Version
 
 ## Edit the Code
-The first step is to update **all** the version numbers in the code. All the occurrences of a PSL version number should be kept in sync, i.e., have the same value for all occurrences in all `pom.xml` files and other resources across all modules. In addition, **only one commit in the entire Git repository should have a particular stable version number**. (A stable version number is a version number with "-SNAPHOT" on the end.)
+The first step is to update **all** the version numbers in the code. All the occurrences of a PSL version number should be kept in sync, i.e., have the same value for all occurrences in all `pom.xml` files and other resources across all modules. In addition, **only one commit in the entire Git repository should have a particular stable version number**. (A stable version number is a version number _without_ "-SNAPHOT" on the end.)
 
 Version numbers appear as a module's version in its `pom.xml` file, as well as the version of parents and dependencies.
 The following list is all the occurrences of the version number in the PSL code (relative to the root directory):
