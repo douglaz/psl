@@ -106,4 +106,4 @@ Push your commit when finished.
 ```
 >> git tag -a x.y.z -m 'Version x.y.z'
 >> git push origin x.y.z
-``
+```
