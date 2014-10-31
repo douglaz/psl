@@ -19,7 +19,7 @@ Visit the [[getting started]] guide to use the PSL software.
 ** [[Logging]]
 ** [[Eclipse integration]]
 ** [[Running a PSL program as a Markov Logic program ]]
-** [[Importing the Core Library]]
+** [[Importing the core library]]
 ** [[Connecting to an existing database]]
 ** Add ons
 *** [[MOSEK add on]]
