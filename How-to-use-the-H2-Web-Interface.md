@@ -4,7 +4,7 @@ If you use H2 as the backend database for PSL (as is done in the examples), it c
 
 You should set up your PSL program to use H2 on disk and note where it is stored. For example, if you create your DataStore using the following code
 ```java
-DataStore data = new RDBMSDataStore(new H2DatabaseDriver(Type.Disk, "/home/steve/psl", true), config)
+DataStore data = new RDBMSDataStore(new H2DatabaseDriver(Type.Disk, "/home/steve/psl", true), config);
 ```
 then PSL will create an H2 database in the file `/home/steve/psl/psl.h2.db`. Then, run your program so the resulting H2 database can be inspected.
 
