@@ -1,3 +1,9 @@
+Version 1.1.1 (https://github.com/linqs/psl/tree/1.1.1)
+
+* Improved examples, which demonstrate database population for non-lazy inference and learning
+* Support for learning negative weights (limited to inference methods for discrete MRFs that support negative weights)
+* Bug fixes
+
 Version 1.1 (https://github.com/linqs/psl/tree/1.1)
 
 * An improved Groovy interface. Try the new examples via https://github.com/linqs/psl/wiki/Installing-examples to learn the new interface.
