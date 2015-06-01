@@ -1,4 +1,4 @@
-This a HOWTO on releasing a new PSL version. All first and second level headers are steps in the process, and should be followed sequentially.
+This a HOWTO on releasing a new stable PSL version. All first and second level headers are steps in the process, and should be followed sequentially.
 
 (This page also contains instructions for new SNAPSHOT versions, since this is often part of the process of releasing a stable version.)
 
