@@ -6,7 +6,7 @@ To change the [[version|versions]] of PSL your project uses, edit your project's
     <dependency>
         <groupId>edu.umd.cs</groupId>
         <artifactId>psl-groovy</artifactId>
-        <version>1.1</version>
+        <version>1.1.1</version>
     </dependency>
     ...
 </dependencies>
