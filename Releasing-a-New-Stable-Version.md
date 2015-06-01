@@ -36,8 +36,8 @@ Run the following two commands:
 
 There are two ways the branch structure of the Git repo can change because of a new stable version:
 
-1. The master branch **might** need to be updated
-1. A working branch **will** need to be deleted
+1. The master branch might need to be updated
+1. A working branch might need to be deleted
 
 ## Updating the Master Branch
 
@@ -57,13 +57,13 @@ If the master branch is upstream of the new stable version. This makes it easy. 
 This will advance the master branch. If, however, the master branch is not upstream,
 **TODO: WRITE THIS AND TEST IT**
 
-## Deleting the working branch
+## Deleting a working branch
 
-There should now be a working branch with the name "x.y.z-SNAPSHOT" pointing to the same commit as the tag "x.y.z" (and possibly the master branch). The working branch should be deleted (which deletes the branch name, not the commit itself).
+There might now be a working branch pointing to the same commit as the tag "x.y.z" (and possibly the master branch). If the working branch is not the develop branch, it should probably be deleted (which deletes the branch name, not the commit itself). Don't delete the develop branch! Substituting the branch name for BRANCH, run the following commands:
 
 ```
->> git branch -d x.y.z-SNAPSHOT
->> git push origin :x.y.z-SNAPSHOT
+>> git branch -d BRANCH
+>> git push origin :BRANCH
 ```
 
 # Deploy New Stable Version
