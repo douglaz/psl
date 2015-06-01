@@ -14,7 +14,7 @@ Remember to test the code and double check it is ready for release. Make sure th
 1. [[Install and run the examples | Installing examples]].
 
 ## Find the New Version Number
-Version numbers are of the format x.y or x.y.z, where
+Stable version numbers are of the format x.y or x.y.z, where
 
 * x = major version
 * y = minor version
