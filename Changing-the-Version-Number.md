@@ -1,6 +1,8 @@
-This is a HOWTO on changing the version number in the PSL code base. A new version number should be applied as a new commit that does nothing else, so make sure you are working on a clean working copy with no uncommitted changes.
+This is a HOWTO on changing the version number in the PSL code base.
 
 # Version Number Policy
+
+A new version number should be applied as a new commit that does nothing else, so make sure you are working on a clean working copy with no uncommitted changes.
 
 Version numbers consist of the following components:
 
