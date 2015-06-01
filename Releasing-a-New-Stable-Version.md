@@ -144,7 +144,7 @@ This will advance the master branch. If, however, the master branch is not upstr
 
 # Deploy New Stable Version
 
-With the stable version checked out, on a machine with file system access to the repository, in the top level directory of the project (the one with the PSL project pom.xml file, not any of the subprojects), run the following command:
+With the new stable version checked out, on a machine with file system access to the repository, in the top level directory of the project (the one with the PSL project pom.xml file, not any of the subprojects), run the following command:
 
 ```
 >> mvn deploy -P release
