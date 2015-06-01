@@ -73,3 +73,9 @@ With the new stable version checked out, on a machine with file system access to
 ```
 >> mvn deploy -P release
 ```
+
+# Last Steps
+
+## Announce New Release
+
+Post an announcement on the [[user group | https://groups.google.com/forum/#!forum/psl-users]] 
