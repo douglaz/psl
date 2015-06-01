@@ -45,6 +45,8 @@ The Master branch should always point to the commit of the highest stable versio
 
 So, if the master branch points to version 1.2, then releasing 1.1.1 would not update the master branch, but releasing 1.2.1 or 1.3 would.
 
+If you are updating the master branch, update the latest stable version number listed on the [[version page | Versions]].
+
 If the master branch is upstream of the new stable version. This makes it easy. Simply run the following commands:
 **TODO: TEST THIS**
 
@@ -76,6 +78,21 @@ With the new stable version checked out, on a machine with file system access to
 
 # Last Steps
 
+## Update Change Log
+
+Update the [[change log]] with a list of the main changes since the most recent upstream stable version. For example, if releasing 1.0.2, list the main changes since 1.0.1, even if there is a more recent 1.1 release.
+
 ## Announce New Release
 
-Post an announcement on the [[user group | https://groups.google.com/forum/#!forum/psl-users]] 
+Post an announcement on the [[user group | https://groups.google.com/forum/#!forum/psl-users]]. Here is a template:
+
+```
+Subject: New Version: x.y.z
+
+A new stable version of PSL, version x.y.z (https://github.com/linqs/psl/tree/x.y.z) is now available.
+
+See https://github.com/linqs/psl/wiki/Changing-versions for instructions on changing your PSL projects to the new version.
+
+In version x.y.z:
+[A list of the main changes]
+```
