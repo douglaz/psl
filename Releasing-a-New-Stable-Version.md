@@ -20,7 +20,7 @@ Stable version numbers are of the format x.y or x.y.z, where
 
 The git branch the code is on should already have a version number in its `pom.xml` files of the form x.y.z-SNAPSHOT. Whatever x.y.z-SNAPSHOT is, the new version will be x.y.z. Note that the patch version is not written if it is 0. For example, version 1.1 is always written as x.y, not x.y.z. If the new version is just of the form x.y, ignore the ".z" in the below instructions.
 
-# Create the New Stable Release
+# Create the Stable Release
 
 ## Change the Version
 The first step is to [[change the version number | Changing the version number]] to the stable version number. Remember to perform the commit at the end of the instructions.
@@ -34,10 +34,10 @@ Run the following two commands:
 
 # Update Git Branches
 
-There are two ways the branch structure of the Git repo might change because of a new stable version:
+There are two ways the branch structure of the Git repo can change because of a new stable version:
 
-1. The master branch might need to be updated
-1. A working branch might need to be deleted
+1. The master branch **might** need to be updated
+1. A working branch **will** need to be deleted
 
 ## Updating the Master Branch
 
@@ -57,7 +57,14 @@ If the master branch is upstream of the new stable version. This makes it easy. 
 This will advance the master branch. If, however, the master branch is not upstream,
 **TODO: WRITE THIS AND TEST IT**
 
-## Deleting a working branch
+## Deleting the working branch
+
+There should now be a working branch with the name "x.y.z-SNAPSHOT" pointing to the same commit as the tag "x.y.z" (and possibly the master branch). The working branch should be deleted (which deletes the branch name, not the commit itself).
+
+```
+>> git branch -d x.y.z-SNAPSHOT
+>> git push origin :x.y.z-SNAPSHOT
+```
 
 # Deploy New Stable Version
 
