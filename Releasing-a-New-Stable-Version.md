@@ -84,7 +84,7 @@ Update the [[change log]] with a list of the main changes since the most recent 
 
 ## Announce New Release
 
-Post an announcement on the [[user group | https://groups.google.com/forum/#!forum/psl-users]]. Here is a template:
+Post an announcement on the [[user group | https://groups.google.com/forum/#!forum/psl-users]]. Remember to select the "make an announcement" option, rather than "start a discussion." Here is a template:
 
 ```
 Subject: New Version: x.y.z
