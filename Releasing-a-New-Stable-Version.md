@@ -85,7 +85,50 @@ sed -i "" "s_<version>$1\</version>_<version>$2</version>_g" psl-groovy/pom.xml
 
 sed -i "" "s_<version>$1\</version>_<version>$2</version>_g" psl-parser/pom.xml
 
-git diff
+git diff --shortstat
+
+echo "Does the above say 23 lines added and deleted? IF NOT, SOMETHING WENT WRONG!"
+```
+
+### Linux Script for Changing Version Numbers in the Code
+
+```
+#!/bin/bash
+
+# THIS VERSION ONLY WORKS FOR THE LINUX VERSION OF SED
+
+die () {
+    echo >&2 "$@"
+    exit 1
+}
+
+[ "$#" -eq 2 ] || die "Two arguments, old and new versions, required"
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-addon/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-addon/psl-addon-mosek/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-archetype/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-archetype/psl-archetype-example/pom.xml
+
+sed -i "s_<defaultValue>$1</defaultValue>_<defaultValue>$2</defaultValue>_g" psl-archetype/psl-archetype-example/src/main/resources/META-INF/maven/archetype-metadata.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-archetype/psl-archetype-example/src/main/resources/archetype-resources/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-archetype/psl-archetype-groovy/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-archetype/psl-archetype-groovy/src/main/resources/archetype-resources/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-core/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-groovy/pom.xml
+
+sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-parser/pom.xml
+
+git diff --shortstat
 
 echo "Does the above say 23 lines added and deleted? IF NOT, SOMETHING WENT WRONG!"
 ```
