@@ -1,4 +1,4 @@
-This is a HOWTO on changing the version number in the PSL code base.
+This is a HOWTO on changing the version number in the PSL code base. In most, if not all, cases, this HOWTO should be followed as part of a larger one, such as [[Releasing a New Stable Version]], not by itself.
 
 # Version Number Policy
 
