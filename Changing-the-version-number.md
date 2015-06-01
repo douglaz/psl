@@ -1,8 +1,16 @@
 This is a HOWTO on changing the version number in the PSL code base. A new version number should be applied as a new commit that does nothing else, so make sure you are working on a clean working copy with no uncommitted changes.
 
-All the occurrences of a PSL version number should be kept in sync, i.e., have the same value for all occurrences in all `pom.xml` files and other resources across all modules. In addition, **only one commit in the entire Git repository should have a particular stable version number**. (A stable version number is a version number _without_ "-SNAPHOT" on the end.)
+# Version Number Policy
+
+Version numbers consist of the following components:
+
+* x = major version
+* y = minor version
+* z = patch version
 
 Your new version number should be of the form x.y.z (for a stable version) or x.y.z-SNAPSHOT (for an unstable version). Note that the patch version is not written if it is 0. For example, version 1.1 is always written as x.y, not x.y.z, and version 1.1-SNAPSHOT is always written as x.y-SNAPSHOT, not x.y.z-SNAPSHOT. If the new version is just of the form x.y or x.y-SNAPSHOT, ignore the ".z" in the below instructions.
+
+All the occurrences of a PSL version number should be kept in sync, i.e., have the same value for all occurrences in all `pom.xml` files and other resources across all modules. In addition, **only one commit in the entire Git repository should have a particular stable version number**.
 
 # Edit the code
 
