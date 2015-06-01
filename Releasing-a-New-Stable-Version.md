@@ -22,9 +22,9 @@ Version numbers are of the format x.y or x.y.z, where
 
 The git branch the code is on should already have a version number in its `pom.xml` files of the form x.y.z-SNAPSHOT. Whatever x.y.z-SNAPSHOT is, the new version will be x.y.z. Note that the patch version is not written if it is 0. For example, version 1.1 is always written as x.y, not x.y.z. If the new version is just of the form x.y, ignore the ".z" in the below instructions.
 
-# Changing the Version
+# Create the New Stable Release
 
-## Edit the Code
+## Change the Version
 The first step is to [[change the version number | Changing the version number]] to the stable version number. Remember to perform the commit at the end of the instructions.
 
 ## Tag the New Stable Version
@@ -34,14 +34,14 @@ Run the following two commands:
 >> git push origin x.y.z
 ```
 
-## Update Git Branches
+# Update Git Branches
 
 There are two ways the branch structure of the Git repo might change because of a new stable version:
 
 1. The master branch might need to be updated
 1. A working branch might need to be deleted
 
-### Updating the Master Branch
+## Updating the Master Branch
 
 The Master branch should always point to the commit of the highest stable version number, where x, y, and z are treated as separate orders of magnitude.
 
@@ -59,9 +59,7 @@ If the master branch is upstream of the new stable version. This makes it easy. 
 This will advance the master branch. If, however, the master branch is not upstream,
 **TODO: WRITE THIS AND TEST IT**
 
-### Deleting a working branch
-
-
+## Deleting a working branch
 
 # Deploy New Stable Version
 
