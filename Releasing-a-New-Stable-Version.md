@@ -18,7 +18,7 @@ Stable version numbers are of the format x.y or x.y.z, where
 * y = minor version
 * z = patch version
 
-The git branch the code is on should already have a version number in its `pom.xml` files of the form x.y.z-SNAPSHOT. Whatever x.y.z-SNAPSHOT is, the new version will be x.y.z. Note that the patch version is not written if it is 0. For example, version 1.1 is always written as x.y, not x.y.z. If the new version is just of the form x.y, ignore the ".z" in the below instructions.
+The git branch the code is on (the working branch) should already have a version number in its `pom.xml` files of the form x.y.z-SNAPSHOT. Whatever x.y.z-SNAPSHOT is, the new version will be x.y.z. Note that the patch version is not written if it is 0. For example, version 1.1 is always written as x.y, not x.y.z. If the new version is just of the form x.y, ignore the ".z" in the below instructions.
 
 # Create the Stable Release
 
@@ -37,7 +37,7 @@ Run the following two commands:
 There are two ways the branch structure of the Git repo can change because of a new stable version:
 
 1. The master branch might need to be updated
-1. A working branch might need to be deleted
+1. The working branch might need to be deleted
 
 ## Updating the Master Branch
 
@@ -47,25 +47,24 @@ So, if the master branch points to version 1.2, then releasing 1.1.1 would not u
 
 If you are updating the master branch, update the latest stable version number listed on the [[version page | Versions]].
 
-If the master branch is upstream of the new stable version. This makes it easy. Simply run the following commands:
-**TODO: TEST THIS**
+If the master branch is upstream of the new stable version, it is easy. Substituting the working branch name for WORKING_BRANCH, simply run the following commands:
 
 ```
 >> git checkout master
->> git pull x.y.z
+>> git pull origin WORKING_BRANCH
 >> git push
 ```
 
 This will advance the master branch. If, however, the master branch is not upstream,
 **TODO: WRITE THIS AND TEST IT**
 
-## Deleting a working branch
+## Deleting the working branch
 
-There might now be a working branch pointing to the same commit as the tag "x.y.z" (and possibly the master branch). If the working branch is not the develop branch, it should probably be deleted (which deletes the branch name, not the commit itself). Don't delete the develop branch! Substituting the branch name for BRANCH, run the following commands:
+There should now be a working branch pointing to the tag "x.y.z" (and possibly the master branch). If the working branch is not the develop branch, it should probably be deleted (which deletes the branch name, not the commit itself). Don't delete the develop branch! Substituting the working branch name for WORKING_BRANCH, run the following commands:
 
 ```
->> git branch -d BRANCH
->> git push origin :BRANCH
+>> git branch -d WORKING_BRANCH
+>> git push origin :WORKING_BRANCH
 ```
 
 # Deploy New Stable Version
