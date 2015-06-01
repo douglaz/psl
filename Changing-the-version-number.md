@@ -1,4 +1,4 @@
-This is a set of instructions for changing the version number in the PSL code base. A new version number should be applied as a new commit that does nothing else, so make sure you are working on a clean working copy with no uncommitted changes.
+This is a HOWTO on changing the version number in the PSL code base. A new version number should be applied as a new commit that does nothing else, so make sure you are working on a clean working copy with no uncommitted changes.
 
 All the occurrences of a PSL version number should be kept in sync, i.e., have the same value for all occurrences in all `pom.xml` files and other resources across all modules. In addition, **only one commit in the entire Git repository should have a particular stable version number**. (A stable version number is a version number _without_ "-SNAPHOT" on the end.)
 
