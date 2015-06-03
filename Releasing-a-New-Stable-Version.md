@@ -8,7 +8,7 @@ A release is a single commit that increments the software's version number to a 
 ## Test the Code
 Remember to test the code and double check it is ready for release. Make sure there are no errors or bugs.
 
-1. Install the code. (Run `mvn install`.)
+1. Install the code. (Run `mvn clean -P release` and `mvn install -P release`.)
 1. [[Install and run the examples | Installing examples]].
 
 ## Find the New Version Number
