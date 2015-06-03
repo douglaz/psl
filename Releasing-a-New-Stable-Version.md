@@ -61,9 +61,9 @@ This will advance the master branch. If, however, the master branch is not upstr
 ## Deleting the working branch
 
 There should now be a working branch pointing to the tag "x.y.z" (and possibly the master branch). If the working branch is not the develop branch, it should probably be deleted (which deletes the branch name, not the commit itself). Don't delete the develop branch! Substituting the working branch name for WORKING_BRANCH, run the following commands:
-```
->> git branch -d WORKING_BRANCH
->> git push origin :WORKING_BRANCH
+```sh
+git branch -d WORKING_BRANCH
+git push origin :WORKING_BRANCH
 ```
 
 # Deploy New Stable Version
