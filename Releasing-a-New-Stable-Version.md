@@ -27,9 +27,9 @@ The first step is to [[change the version number | Changing the version number]]
 
 ## Tag the New Stable Version
 Run the following two commands:
-```
->> git tag -a x.y.z -m 'Version x.y.z'
->> git push origin x.y.z
+```sh
+git tag -a x.y.z -m 'Version x.y.z'
+git push origin x.y.z
 ```
 
 # Update Git Branches
@@ -49,10 +49,10 @@ If you are updating the master branch, update the latest stable version number l
 
 If the master branch is upstream of the new stable version, it is easy. Substituting the working branch name for WORKING_BRANCH, simply run the following commands:
 
-```
->> git checkout master
->> git pull origin WORKING_BRANCH
->> git push
+```sh
+git checkout master
+git pull origin WORKING_BRANCH
+git push
 ```
 
 This will advance the master branch. If, however, the master branch is not upstream,
@@ -61,7 +61,6 @@ This will advance the master branch. If, however, the master branch is not upstr
 ## Deleting the working branch
 
 There should now be a working branch pointing to the tag "x.y.z" (and possibly the master branch). If the working branch is not the develop branch, it should probably be deleted (which deletes the branch name, not the commit itself). Don't delete the develop branch! Substituting the working branch name for WORKING_BRANCH, run the following commands:
-
 ```
 >> git branch -d WORKING_BRANCH
 >> git push origin :WORKING_BRANCH
@@ -70,10 +69,9 @@ There should now be a working branch pointing to the tag "x.y.z" (and possibly t
 # Deploy New Stable Version
 
 With the new stable version checked out, on a machine with file system access to the repository, in the top level directory of the project (the one with the PSL project pom.xml file, not any of the subprojects), run the following commands:
-
 ```sh
->> mvn clean -P release
->> mvn deploy -P release
+mvn clean -P release
+mvn deploy -P release
 ```
 
 # Last Steps
