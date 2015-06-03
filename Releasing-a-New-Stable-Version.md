@@ -45,7 +45,7 @@ The Master branch should always point to the commit of the highest stable versio
 
 So, if the master branch points to version 1.2, then releasing 1.1.1 would not update the master branch, but releasing 1.2.1 or 1.3 would.
 
-If you are updating the master branch, update the latest stable version number listed on the [[version page | Versions]] and the [[version changing page | changing versions]].
+If you are updating the master branch, update the latest stable version number listed on the [[version page | Versions]], the [[version changing page | changing versions]], the [[example installation page | Installing examples]], and the [[new project page | Creating a new project]].
 
 If the master branch is upstream of the new stable version, it is easy. Substituting the working branch name for WORKING_BRANCH, simply run the following commands:
 
