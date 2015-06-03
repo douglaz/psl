@@ -69,9 +69,10 @@ There should now be a working branch pointing to the tag "x.y.z" (and possibly t
 
 # Deploy New Stable Version
 
-With the new stable version checked out, on a machine with file system access to the repository, in the top level directory of the project (the one with the PSL project pom.xml file, not any of the subprojects), run the following command:
+With the new stable version checked out, on a machine with file system access to the repository, in the top level directory of the project (the one with the PSL project pom.xml file, not any of the subprojects), run the following commands:
 
-```
+```sh
+>> mvn clean -P release
 >> mvn deploy -P release
 ```
 
