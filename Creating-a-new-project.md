@@ -3,7 +3,7 @@ After ensuring that the [[prerequisites]] are installed, execute the following c
 ```sh
 mvn archetype:generate -DarchetypeArtifactId=psl-archetype-groovy \
 -DarchetypeRepository=https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/ \
--DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=1.1
+-DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=1.1.1
 ```
 
 When prompted to accept the default property values, enter 'Y'.
