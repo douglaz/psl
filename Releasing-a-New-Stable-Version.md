@@ -47,16 +47,13 @@ So, if the master branch points to version 1.2, then releasing 1.1.1 would not u
 
 If you are updating the master branch, update the latest stable version number listed on the [[version page | Versions]], the [[version changing page | changing versions]], the [[example installation page | Installing examples]], and the [[new project page | Creating a new project]].
 
-If the master branch is upstream of the new stable version, it is easy. Substituting the working branch name for WORKING_BRANCH, simply run the following commands:
+If you are updating the master branch, it should already be upstream of the new stable version. Substituting the working branch name for WORKING_BRANCH, simply run the following commands:
 
 ```sh
 git checkout master
 git pull origin WORKING_BRANCH
 git push
 ```
-
-This will advance the master branch. If, however, the master branch is not upstream,
-**TODO: WRITE THIS AND TEST IT**
 
 ## Deleting the working branch
 
