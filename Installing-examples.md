@@ -5,7 +5,7 @@ To set up the examples, change to the directory in which you want to create the 
 Then execute the following command:
 
 ```sh
->> mvn archetype:generate -DarchetypeArtifactId=psl-archetype-example \
+mvn archetype:generate -DarchetypeArtifactId=psl-archetype-example \
 -DarchetypeRepository=https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/ \
 -DarchetypeGroupId=edu.umd.cs -DarchetypeVersion=1.1.1
 ```
