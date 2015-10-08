@@ -1,6 +1,6 @@
 Before [[releasing a new stable version]], it is good to make sure that PSL's copyright notices are up to date. Scripts for doing that are below:
 
-### OSX Script for Changing Version Numbers in the Code
+### OSX Script for Changing Copyright Notices
 
 ```
 #!/bin/bash
@@ -17,4 +17,6 @@ die () {
 find * -not -path '*/\.*' -type f -exec sed -i '' 's_ \* Copyright 2013-$1 The Regents of the University of California_ \* Copyright 2013-$2 The Regents of the University of California_g' {} \;
  
 find . -not -path '*/\.*' -type f -exec sed -i '' 's_  - Copyright 2013-$1 The Regents of the University of California_  - Copyright 2013-$2 The Regents of the University of California_g' {} \;
+
+sed -i '' 's_Copyright 2013-$1 The Regents of the University of California_Copyright 2013-$2 The Regents of the University of California_g' NOTICE
 ```
