@@ -1,0 +1,20 @@
+Before [[releasing a new stable version]], it is good to make sure that PSL's copyright notices are up to date. Scripts for doing that are below:
+
+### OSX Script for Changing Version Numbers in the Code
+
+```
+#!/bin/bash
+
+# THIS VERSION ONLY WORKS FOR THE MAC OSX VERSION OF SED
+
+die () {
+    echo >&2 "$@"
+    exit 1
+}
+
+[ "$#" -eq 2 ] || die "Two arguments, old and new end years, required"
+
+find * -not -path '*/\.*' -type f -exec sed -i '' 's_ \* Copyright 2011-$1 The Regents of the University of California_ \* Copyright 2013-$2 The Regents of the University of California_g' {} \;
+ 
+find . -not -path '*/\.*' -type f -exec sed -i '' 's_  - Copyright 2013-$1 The Regents of the University of California_  - Copyright 2013-$2 The Regents of the University of California_g' {} \;
+```
