@@ -3,3 +3,5 @@
 [[Creating a New Working Branch]]
 
 [[Changing the Version Number]]
+
+[[Changing the Copyright Year]]
