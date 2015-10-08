@@ -14,7 +14,7 @@ die () {
 
 [ "$#" -eq 2 ] || die "Two arguments, old and new end years, required"
 
-find * -not -path '*/\.*' -type f -exec sed -i '' 's_ \* Copyright 2011-$1 The Regents of the University of California_ \* Copyright 2013-$2 The Regents of the University of California_g' {} \;
+find * -not -path '*/\.*' -type f -exec sed -i '' 's_ \* Copyright 2013-$1 The Regents of the University of California_ \* Copyright 2013-$2 The Regents of the University of California_g' {} \;
  
 find . -not -path '*/\.*' -type f -exec sed -i '' 's_  - Copyright 2013-$1 The Regents of the University of California_  - Copyright 2013-$2 The Regents of the University of California_g' {} \;
 ```
