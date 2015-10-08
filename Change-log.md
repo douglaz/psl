@@ -1,3 +1,13 @@
+Version 1.2 (https://github.com/linqs/psl/tree/1.2)
+
+* Expectation-maximization and [paired-dual learning] (http://linqs.cs.umd.edu/basilic/web/Publications/2015/bach:icml15/bach-icml15.pdf) in the edu.umd.cs.psl.application.learning.weight.em package
+* Topic modeling with [latent topic networks](http://linqs.cs.umd.edu/basilic/web/Publications/2015/foulds:icml15/Foulds2015LatentTopicNetworks.pdf) in the edu.umd.cs.psl.application.topicmodel package
+* Support for [averaging rules](http://www.cs.utexas.edu/users/ml/papers/beltagy.acl14.pdf) in the edu.umd.cs.psl.model.kernel.rule package
+* New DateTime and Long attribute types in the edu.umd.cs.psl.model.argument package, thanks to Jack Sullivan
+* Java 8 compatibility
+* Support for MySQL backend (except for external functions)
+* Bug fixes
+
 Version 1.1.1 (https://github.com/linqs/psl/tree/1.1.1)
 
 * Improved examples, which demonstrate database population for non-lazy inference and learning
