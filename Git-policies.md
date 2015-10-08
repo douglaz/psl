@@ -4,4 +4,4 @@
 
 [[Changing the Version Number]]
 
-[[Changing the Copyright Year]]
+[[Changing the Copyright Notice]]
