@@ -6,7 +6,7 @@ This a HOWTO on releasing a new stable PSL version. All first and second level h
 A release is a single commit that increments the software's version number to a stable version number and does nothing else. So, before you release a version, make sure all your changes are committed and pushed, and the code is in the state in which you want to release it. Make sure the [[copyright notices | Changing the Copyright Notice]] are up to date.
 
 ## Test the Code
-Remember to test the code and double check it is ready for release. Make sure there are no errors or bugs.
+Remember to test the code and double check it is ready for release. To complete a release build, you will need all dependencies used by PSL even if not used by your changes, for example the [[MOSEK add-on | MOSEK-add-on]]. Make sure there are no errors or bugs.
 
 1. Install the code. (Run `mvn clean -P release` and `mvn install -P release`.)
 1. [[Install and run the examples | Installing examples]].
