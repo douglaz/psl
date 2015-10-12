@@ -1,5 +1,5 @@
 Version 1.2.1 (https://github.com/linqs/psl/tree/1.2.1)
-* Fixes a bug in External Function registration 
+* Bug fix for External Function registration 
 
 Version 1.2 (https://github.com/linqs/psl/tree/1.2)
 
