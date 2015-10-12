@@ -1,3 +1,6 @@
+Version 1.2.1 (https://github.com/linqs/psl/tree/1.2.1)
+* Fixes a bug in External Function registration 
+
 Version 1.2 (https://github.com/linqs/psl/tree/1.2)
 
 * Expectation-maximization and [paired-dual learning] (http://linqs.cs.umd.edu/basilic/web/Publications/2015/bach:icml15/bach-icml15.pdf) in the edu.umd.cs.psl.application.learning.weight.em package
