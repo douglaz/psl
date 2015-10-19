@@ -28,12 +28,12 @@ The following list is all the occurrences of the version number in the PSL code 
 1. `psl-archetype/psl-archetype-example/src/main/resources/archetype-resources/pom.xml` (1x: psl-groovy dependency version)
 1. `psl-archetype/psl-archetype-groovy/pom.xml` (2x: version and parent version)
 1. `psl-archetype/psl-archetype-groovy/src/main/resources/archetype-resources/pom.xml` (1x: psl-groovy dependency version)
-1. `psl-cli/pom.xml` (1x: version)
+1. `psl-cli/pom.xml` (3x: version, parent version, and psl-core dependency version)
 1. `psl-core/pom.xml` (2x: version and parent version)
 1. `psl-groovy/pom.xml` (3x: version, parent version, and psl-core dependency version)
 1. `psl-parser/pom.xml` (3x: version, parent version, and psl-core dependency version)
 
-**Total line changes: 24**
+**Total line changes: 26**
 
 Remember to check the diff statistics before proceeding.
 
@@ -79,7 +79,7 @@ sed -i "" "s_<version>$1\</version>_<version>$2</version>_g" psl-parser/pom.xml
 
 git diff --shortstat
 
-echo "Does the above say 24 lines added and deleted? IF NOT, SOMETHING WENT WRONG!"
+echo "Does the above say 26 lines added and deleted? IF NOT, SOMETHING WENT WRONG!"
 ```
 
 ### Linux Script for Changing Version Numbers in the Code
@@ -124,7 +124,7 @@ sed -i "s_<version>$1</version>_<version>$2</version>_g" psl-parser/pom.xml
 
 git diff --shortstat
 
-echo "Does the above say 24 lines added and deleted? IF NOT, SOMETHING WENT WRONG!"
+echo "Does the above say 26 lines added and deleted? IF NOT, SOMETHING WENT WRONG!"
 ```
 
 # Commit
