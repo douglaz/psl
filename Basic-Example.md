@@ -6,7 +6,7 @@ After ensuring that the [[prerequisites]] and [[examples|installing examples]] a
   
 Here, you will find `BasicExample.groovy`.  This file provides an example of using the Groovy PSL syntax for defining predicates and rules, loading predicate data, running basic inferences, and learning rule weights. 
 
-# Model: Predicates, Functions, and Constraints
+# Model: Predicates, Functions, Rules, and Constraints
 
  'BasicExample.groovy' defines 4 simple predicates:
 ### Predicates
@@ -70,6 +70,8 @@ m.add rule : ( Network(A, snA) & Network(B, snB) & SamePerson(A,B) & Knows(A, Fr
 ```
 
 For more information on defining rules see [[defining rules]].
+
+### Constraints
 
 After we define our rules, we then define constraints for our model. 
 
