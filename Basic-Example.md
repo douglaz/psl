@@ -33,8 +33,10 @@ m.add predicate: "SamePerson", types: [ArgumentType.UniqueID, ArgumentType.Uniqu
 
 See [[defining predicate types]] for more information on defining predicate types.   
 
-In addition, ``BasicExample.groovy`` defines the function:
+
 ### Functions
+
+In addition, ``BasicExample.groovy`` defines the function:
 - **SameName**
 
 ```
