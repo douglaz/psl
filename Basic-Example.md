@@ -8,6 +8,29 @@ Here, you will find `BasicExample.groovy`.  This file provides an example of usi
 
 # Model: Creation and Configuration
 
+The first portion of a PSL program creates a model and defines configuration parameters for that model.
+
+We create a ConfigBundle which loads properties from the file: ```/src/main/resources/psl.properties```
+
+```
+ConfigManager cm = ConfigManager.getManager()
+ConfigBundle config = cm.getBundle("basic-example")
+```
+
+Now, we create a ```DataStore``` to enable database functionality for our PSL program, and provide the specified configuration parameters.
+
+```
+def defaultPath = System.getProperty("java.io.tmpdir")
+String dbpath = config.getString("dbpath", defaultPath + File.separator + "basic-example")
+DataStore data = new RDBMSDataStore(new H2DatabaseDriver(Type.Disk, dbpath, true), config)
+```
+
+Finally, with our ```DataStore``` created, we can create a PSL model:
+
+```
+PSLModel m = new PSLModel(this, data)
+```
+
 # Model: Predicates, Functions, Rules, and Constraints
 
  'BasicExample.groovy' defines 4 simple predicates:
