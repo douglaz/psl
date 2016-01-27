@@ -139,85 +139,90 @@ InserterUtils.loadDelimitedData(insert, dir+"sn_knows.txt");
 
 # Model: Inference
 
-###
-When you are ready, [[run | running a program]] BasicExample.groovy.  You should see some output that looks like:
 
-````
-Model Evidence:
-PartialFunctional on samePerson(Entity, Entity)
-PartialInverseFunctional on samePerson(Entity, Entity)
-{( knows(A, tv1)[tv1] u knows(tv2, A)[tv2])} =={}(samePerson(Entity, Entity)) {( knows(B, tv3)[tv3] u knows(tv4, B)[tv4])} =: sameFriends__1(Entity, Entity)[]
-DataCertainty
-5.0 : ( ( ( ( name(A, X) ^ name(B, Y) ) ^ #NonSymmetric(A, B) ) ^ sameName(X, Y) ) ^ !( samePerson(A, B) ) )
-Prior weight on samePerson(Entity, Entity) : 1.0
-3.2 : ( ( samePerson(A, B) ^ #NonSymmetric(A, B) ) ^ !( sameFriends__1(A, B) ) )
+Now that we have set up our model and data loading, we are ready to enable inference to predict the unknown values of our predicates. 
 
---- Atoms: 
-samePerson(5, 8) V=[0.12]
-samePerson(2, 3) V=[0.12]
-samePerson(2, 5) V=[0.13]
-samePerson(4, 9) V=[0.21]
-samePerson(12, 15) V=[0.17]
-samePerson(4, 11) V=[0.13]
-samePerson(2, 4) V=[0.12]
-samePerson(8, 16) V=[0.15]
-samePerson(14, 16) V=[0.1]
-samePerson(14, 17) V=[0.13]
-samePerson(12, 16) V=[0.2]
-samePerson(8, 13) V=[0.18]
-samePerson(2, 12) V=[0.23]
-samePerson(8, 15) V=[0.12]
-samePerson(8, 12) V=[0.18]
-samePerson(8, 14) V=[0.17]
-samePerson(14, 15) V=[0.15]
-samePerson(2, 8) V=[0.12]
-samePerson(2, 9) V=[0.15]
-samePerson(4, 5) V=[0.17]
-samePerson(13, 11) V=[0.31]
-samePerson(15, 16) V=[0.1]
-samePerson(15, 17) V=[0.19]
-samePerson(5, 9) V=[0.14]
-samePerson(1, 5) V=[0.13]
-samePerson(9, 15) V=[0.21]
-samePerson(5, 11) V=[0.12]
-samePerson(3, 8) V=[0.38]
-samePerson(9, 17) V=[0.17]
-samePerson(5, 12) V=[0.23]
-samePerson(1, 12) V=[0.13]
-samePerson(1, 3) V=[0.11]
-samePerson(3, 13) V=[0.23]
-samePerson(1, 9) V=[0.13]
-samePerson(11, 16) V=[0.1]
-samePerson(3, 9) V=[0.1]
-samePerson(13, 15) V=[0.11]
-samePerson(11, 14) V=[0.17]
-samePerson(13, 17) V=[0.13]
-samePerson(1, 11) V=[0.13]
-samePerson(11, 17) V=[0.17]
-samePerson(1, 2) V=[0.12]
-samePerson(9, 11) V=[0.2]
-samePerson(5, 14) V=[0.22]
-samePerson(11, 15) V=[0.16]
-samePerson(9, 14) V=[0.18]
-samePerson(3, 4) V=[0.16]
-samePerson(3, 5) V=[0.12]
-# Atoms: 48
-Model Evidence:
-PartialFunctional on samePerson(Entity, Entity)
-PartialInverseFunctional on samePerson(Entity, Entity)
-{( knows(A, tv1)[tv1] u knows(tv2, A)[tv2])} =={}(samePerson(Entity, Entity)) {( knows(B, tv3)[tv3] u knows(tv4, B)[tv4])} =: sameFriends__1(Entity, Entity)[]
-DataCertainty
-0.10961525576133078 : ( ( ( ( name(A, X) ^ name(B, Y) ) ^ #NonSymmetric(A, B) ) ^ sameName(X, Y) ) ^ !( samePerson(A, B) ) )
-Prior weight on samePerson(Entity, Entity) : 0.1290623182788934
-0.0 : ( ( samePerson(A, B) ^ #NonSymmetric(A, B) ) ^ !( sameFriends__1(A, B) ) )
+### Database Preparation
+We start by defining a second partition, ```targetPartition```, that holds the target values for which we want to predict. We then setup a database that takes in 3 arguments: 
+- readPartition -- a partition that stores your ground knowledge
+- toClose -- a set which indicates which predicates you want to close. Closing a predicate treats all of its atoms as observed and prevents prediction of those atom values
+- writePartition -- a partition that stores the knowledge you predict
 
---- Atoms: 
-samePerson(3, 8) V=[0.21]
-# Atoms: 1
-````
+The syntax for this procedure is simple:
+```
+def targetPartition = data.getPartition("targetPartition");
+Database db = data.getDatabase(targetPartition, [Network, Name, Knows] as Set, evidencePartition);
+```
+In order to make predictions, however, we must specify which atoms we want to predict (i.e., we must add such atoms to our targetPartition. 
 
-The first important thing to notice from our output is the set of **samePerson** grounded atoms along with their corresponding soft values.  These groundings and soft values were obtained by loading a priori values into the **names** and **knows** closed predicates and running inference on our defined rules.
+For this example, we add all combinations of user pairs by considering the UniqueIDs used by our data (as assigned in the Data Loading section above). 
+```
+Set<GroundTerm> usersA = new HashSet<GroundTerm>();
+Set<GroundTerm> usersB = new HashSet<GroundTerm>();
+for (int i = 1; i < 8; i++)
+	usersA.add(data.getUniqueID(i));
+for (int i = 11; i < 18; i++)
+	usersB.add(data.getUniqueID(i));
 
-The next thing to notice is the learned rule weights that follow the **samePerson** groundings.  Here, we loaded data into the **samePerson** predicate and then learned the optimal weights of our rules.  For more information on running inferences in PSL see [[running inferences]].
+Map<Variable, Set<GroundTerm>> popMap = new HashMap<Variable, Set<GroundTerm>>();
+popMap.put(new Variable("UserA"), usersA)
+popMap.put(new Variable("UserB"), usersB)
 
-Now that you've gone through your first example perhaps you'd like to try [[more examples | Example-Programs]].  Otherwise, you can return to [[getting started | Getting-started]] or visit the [[FAQ | FAQ]] page.
+DatabasePopulator dbPop = new DatabasePopulator(db);
+dbPop.populate((SamePerson(UserA, UserB)).getFormula(), popMap);
+dbPop.populate((SamePerson(UserB, UserA)).getFormula(), popMap);
+```
+
+### Running Inference
+
+Now that our database is prepared, we can run inference simply with the following call:
+
+```
+MPEInference inferenceApp = new MPEInference(m, db, config);
+inferenceApp.mpeInference();
+inferenceApp.close();
+```
+
+To view how our inference app performed, we print the results of our predictions by printing all atomic values of ```SamePerson``` in our database:
+
+```
+println "Inference results with hand-defined weights:"
+DecimalFormat formatter = new DecimalFormat("${symbol_pound}.${symbol_pound}${symbol_pound}");
+for (GroundAtom atom : Queries.getAllAtoms(db, SamePerson))
+	println atom.toString() + "${symbol_escape}t" + formatter.format(atom.getValue());
+```
+
+# Model: Weight Learning
+
+When we defined our model, we specified a predefined ```weight``` for each rule. It may be the case that we would rather learn an optimal weight for each rule. In order to do so, we must provide evidence data from which we can learn.
+
+In our example, evidence would be the 'true' alignment of our social networks, which we can load into another partition.
+
+```
+Partition trueDataPartition = data.getPartition("trueDataPartition");
+insert = data.getInserter(SamePerson, trueDataPartition)
+InserterUtils.loadDelimitedDataTruth(insert, dir + "sn_align.txt");
+```
+
+where ```sn_align.txt``` stores delimited data with truth values (e.g., 1,11,1.0 which says that the value of the atom ```SamePerson(1,11)=1.0```). 
+
+Once we have evidence available, we can run weight learning with a few short calls. First, we open a database with our true data as the readPartition, and specify which predicates possess values that are fully observed (in this case, only ```SamePerson```). 
+```
+Database trueDataDB = data.getDatabase(trueDataPartition, [samePerson] as Set);
+```
+
+Then we call weight learning as follows:
+```
+MaxLikelihoodMPE weightLearning = new MaxLikelihoodMPE(m, db, trueDataDB, config);
+weightLearning.learn();
+weightLearning.close();
+```
+
+To see how our learning method did, we can view our weights by printing the model:
+
+```
+println "Learned model:"
+println m
+```
+
+# Model: Evaluation
