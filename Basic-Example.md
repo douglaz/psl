@@ -6,6 +6,8 @@ After ensuring that the [[prerequisites]] and [[examples|installing examples]] a
   
 Here, you will find `BasicExample.groovy`.  This file provides an example of using the Groovy PSL syntax for defining predicates and rules, loading predicate data, running basic inferences, and learning rule weights. 
 
+# Model: Creation and Configuration
+
 # Model: Predicates, Functions, Rules, and Constraints
 
  'BasicExample.groovy' defines 4 simple predicates:
@@ -54,7 +56,7 @@ GroundTerm snB = data.getUniqueID(2)
 
 In addition to the above predicates and function, we also define the following rules which are written both with pseudo code and their corresponding PSL syntax below.  For information on writing rules using PSL's syntax please see [[writing rules]].      
 ### Rules
-- **IF** ( Network(A, snA) **AND** Network(B, snB) **AND** Name(A,X) **AND** Name(B,Y) **AND** SameName(X,Y) ) **THEN** SamePerson(A,B)
+- **IF** ( ```Network(A, snA)``` **AND** ```Network(B, snB)``` **AND** ```Name(A,X)``` **AND** ```Name(B,Y)``` **AND** ```SameName(X,Y)``` ) **THEN** ```SamePerson(A,B)```
 
 ```
 m.add rule : ( Network(A, snA) & Network(B, snB) & Name(A,X) & Name(B,Y)
@@ -63,7 +65,7 @@ m.add rule : ( Network(A, snA) & Network(B, snB) & Name(A,X) & Name(B,Y)
 
 Similarly, another rule we might define utilizes the knowledge of the SamePerson and Knows predicates to infer other values of the SamePerson predicate:
 
-- **IF** ( Network(A, snA) **AND** Network(B, snB) **AND** SamePerson(A,B) **AND** Knows(A, Friend1) **AND** Knows(B, Friend2) ) **THEN** SamePerson(Friend1, Friend2)
+- **IF** ( ```Network(A, snA)``` **AND** ```Network(B, snB)``` **AND** ```SamePerson(A,B)``` **AND** ```Knows(A, Friend1)``` **AND** ```Knows(B, Friend2)``` ) **THEN** ```SamePerson(Friend1, Friend2)```
 ```
 m.add rule : ( Network(A, snA) & Network(B, snB) & SamePerson(A,B) & Knows(A, Friend1)
 	& Knows(B, Friend2) ) >> SamePerson(Friend1, Friend2) , weight : 3.2
@@ -226,3 +228,46 @@ println m
 ```
 
 # Model: Evaluation
+
+To test out our learned weights, we want to follow the process of data loading and populating again to load in a new example.
+
+```
+//Data Loading
+Partition evidencePartition2 = data.getPartition("evidencePartition2");
+
+insert = data.getInserter(Network, evidencePartition2)
+InserterUtils.loadDelimitedData(insert, dir+"sn2_network.txt");
+
+insert = data.getInserter(Name, evidencePartition2);
+InserterUtils.loadDelimitedData(insert, dir+"sn2_names.txt");
+
+insert = data.getInserter(Knows, evidencePartition2);
+InserterUtils.loadDelimitedData(insert, dir+"sn2_knows.txt");
+
+//Populating
+def targetPartition2 = data.getPartition("targetPartition2");
+Database db2 = data.getDatabase(targetPartition2, [Network, Name, Knows] as Set, evidencePartition2);
+
+usersA.clear();
+for (int i = 21; i < 28; i++)
+	usersA.add(data.getUniqueID(i));
+usersB.clear();
+for (int i = 31; i < 38; i++)
+	usersB.add(data.getUniqueID(i));
+
+dbPop = new DatabasePopulator(db2);
+dbPop.populate((SamePerson(UserA, UserB)).getFormula(), popMap);
+dbPop.populate((SamePerson(UserB, UserA)).getFormula(), popMap);
+```
+
+And then, we run inference and print our results:
+
+```
+inferenceApp = new MPEInference(m, db2, config);
+result = inferenceApp.mpeInference();
+inferenceApp.close();
+
+println "Inference results on second social network with learned weights:"
+for (GroundAtom atom : Queries.getAllAtoms(db2, SamePerson))
+	println atom.toString() + "${symbol_escape}t" + formatter.format(atom.getValue());
+```
