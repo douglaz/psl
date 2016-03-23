@@ -35,7 +35,7 @@ The following code snippet shows how to read in `BooleanTruth` and `SoftTruth` e
 &nbsp;&nbsp;`insert.loadFromFileWithTruth(q.getName()+".txt"); //note use of loadFromFileWithTruth`<br/> 
 `}`<br/>
 
-* Note: For the latest version(1.2.1) use loadDelimitedData() and loadDelimitedDataTruth() instead of loadFromFile() and loadFromFileWithTruth() respectively.
+* Note: For the latest **version(1.2.1)** use `loadDelimitedData()` and `loadDelimitedDataTruth()` instead of `loadFromFile()` and `loadFromFileWithTruth()` respectively.
 
 
 
