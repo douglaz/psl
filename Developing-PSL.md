@@ -23,13 +23,7 @@ You can install PSL to your local Maven repository by running
 ## Best practices
 
 ## Git policies
-If you're a member of the LINQS group, you may eventually need to release a new version of PSL. There are a number of steps involved in the process. 
-
-[[Releasing a New Stable Version]]
-
+If you're a member of the LINQS group, you may eventually need to release a new version of PSL. There are a number of steps involved in the process, which are detailed in the guide for [[Releasing a New Stable Version]]. 
 [[Creating a New Working Branch]]
 
-[[Changing the Version Number]]
-
-[[Changing the Copyright Notice]]
 
