@@ -14,3 +14,14 @@ then
 ```
 >> git checkout develop
 ```
+
+
+### Preparing for pushing commits to the PSL repository or a fork on GitHub
+
+Create a free account on [GitHub](https://github.com). Then follow one of the following sets of instructions to set up Git and GitHub:
+
+* [Linux guide](http://help.github.com/linux-set-up-git/)
+* [OSX guide](http://help.github.com/mac-set-up-git/)
+* [Windows guide](http://help.github.com/win-set-up-git/)
+
+You can [fork the PSL repository](http://help.github.com/fork-a-repo/), which means that you create a fork hosted on GitHub. You then clone that repository to a local machine, make commits, and, optionally, push some or all of those commits back to the repository on GitHub. Those commits are then publicly available (unless you have paid GitHub for private hosting).
