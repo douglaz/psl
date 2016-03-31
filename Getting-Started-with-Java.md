@@ -51,6 +51,4 @@ Maven will now make the the required PSL libraries and their dependencies availa
 
 ### The PSL API
 
-### Example?
-
 ### [[Advanced Topics]]
