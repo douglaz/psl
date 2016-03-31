@@ -20,6 +20,6 @@ The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.
 
 ## Data Management
 
-**Data Store:** An entire data repository, such as a relational database management system (RDBMS). 
+**Data Store:** An entire data repository, such as a relational database management system (RDBMS). Implemented in [[DataStore.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/database/DataStore.java]].
 
 ## Machine Learning
