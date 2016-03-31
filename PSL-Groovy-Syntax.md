@@ -3,7 +3,7 @@
 * [[Predicate Declaration | Predicate Declaration]]
 * [[Rule Specification | Rule Specification]]
 * [[Prior Declaration | Prior Declaration]]
-* [[String Similarity Definition and Declaration | String Similarity Definition and Declaration]]
+* [[Functions | Functions]]
 * [[Constraints | Constraints]]
 * [[Database Creation | Database Creation]]
 * [[Weight Learning | Weight Learning]]
