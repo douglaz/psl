@@ -1,3 +1,27 @@
+First note: PSL has multiple interfaces
+- [[Command Line Interface for new users | GettingStarted:CommandLineInterface]]
+- [[Groovy for power users | GettingStarted:Groovy]]
+- core Java for application developers | GettingStarted:Java]]
+For all users, you need Java. Here's are instructions to download and install Java: [here]
+
+If you would like to start by reading papers and projects using PSL: [here]
+
+Migration Guide: migrating from PSL 1.0 to PSL 2.0
+Developing PSL Guide
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Welcome to the wiki for the PSL software from the University of Maryland. 
 
 [Probabilistic Soft Logic (PSL)](https://psl.umiacs.umd.edu) is a machine learning framework for developing probabilistic models. PSL models are easy and fast: you can define them using a straightforward logical syntax and solve them with fast convex optimization. PSL has produced state-of-the-art results in many areas spanning natural language processing, social-network analysis, and computer vision.
