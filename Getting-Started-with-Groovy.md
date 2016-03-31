@@ -7,6 +7,9 @@
 
 ## Creating a new Groovy project
 
+## Groovy Syntax
+- [[PSL Groovy syntax]]
+
 ## Running a Groovy PSL program
 
 ## [[Advanced Topics]]
