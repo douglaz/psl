@@ -1,6 +1,7 @@
 # Getting Started with the Command Line Interface
 ## Setup
 - Verify you have Java installed
+    java -version
 - Download the PSL jar file
 
 ## Running your first program
