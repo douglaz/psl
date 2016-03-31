@@ -1,8 +1,10 @@
 ## Setup
 - Verify Java is installed
 - Install maven
+- [[Installation prerequisites | prerequisites]]
 
 ## Looking at a basic example
+- [[Installing examples]]
 - [[Basic example]]
 
 ## Creating a new Groovy project
