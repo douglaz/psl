@@ -1,5 +1,3 @@
-# Getting Started with Groovy
-
 ## Setup
 - Verify Java is installed
 - Install maven
