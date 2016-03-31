@@ -4,7 +4,7 @@ PSL is a machine learning framework for developing probabilistic models develope
 
 To get started with PSL you can follow one of these guides: 
 - Basic guide for beginners. If you are new to PSL we suggest that you start with our Command Line Interface (CLI), which allows you to write a complete PSL model in a simple text file. [[Command Line Interface for new users | GettingStarted:CLI]]
-- If you are comfortable with Java/Groovy, and want to get your hands dirty with complete PSL modeling capabilities we recommend that you use our Groovy interface.  [[Groovy for power users | GettingStarted:Groovy]]
+- If you are comfortable with Java/Groovy, and want to get your hands dirty with complete PSL modeling capabilities we recommend that you use our Groovy interface.  [[Groovy for power users | Getting Started with Groovy]]
 - If you plan on using PSL for your own applications, and will need direct access to Java, please refer to our guide: [[Java for application developers | GettingStarted:Java]].
 
 For all users, you need Java. Here's are instructions to [download and install Java | prereqs:InstallingJava]
