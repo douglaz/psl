@@ -14,3 +14,5 @@ An example of a declaration of a predicate that represents an author's name is:
 
 `model.add predicate: "authorName" , types: [ConstantType.String]`
 
+To take a look at the relevant code look [[here| https://github.com/linqs/psl/blob/develop/psl-core/src/main/java/edu/umd/cs/psl/model/term/ConstantType.java]]. 
+
