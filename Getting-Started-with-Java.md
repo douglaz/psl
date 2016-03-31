@@ -2,9 +2,9 @@ Application builders and advanced users can integrate PSL into their code as a l
 
 ## Integrating PSL via Maven
 
-The [[PSL codebase | https://github.com/linqs/psl]] is organized as a Maven project with several subprojects. The subproject most likely of interest is `psl-core`, but stable versions of all the subprojects are published to the [[PSL Maven repository | https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/]].
+The [[PSL codebase | https://github.com/linqs/psl]] is organized as a Maven project with several subprojects. The subproject most likely of interest is `psl-core`, but stable versions of all the subprojects are published to the [[PSL Maven repository | https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/]]. Including a PSL subproject in your Maven project is easy. It requires two steps
 
-Including a PSL subproject in your Maven project is easy. It requires two steps. First, add `psl-core` (and any other subprojects) as dependencies to your `pom.xml` file:
+First, add `psl-core` (and any other subprojects) as dependencies to your `pom.xml` file:
 
 ```xml
 <dependencies>
@@ -16,6 +16,35 @@ Including a PSL subproject in your Maven project is easy. It requires two steps.
     </dependency>
     ...
 </dependencies>
+```
+
+Second, specify the location of the PSL Maven repository in your `pom.xml` file:
+
+```xml
+<repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</releases>
+			<id>psl-releases</id>
+			<name>PSL Releases</name>
+			<url>https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+		<releases>
+			<enabled>true</enabled>
+			<updatePolicy>daily</updatePolicy>
+			<checksumPolicy>fail</checksumPolicy>
+		</releases>
+		<id>psl-thirdparty</id>
+		<name>PSL Third Party</name>
+		<url>https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-thirdparty/</url>
+		<layout>default</layout>
+	</repository>
+</repositories>
 ```
 
 ## The PSL API
