@@ -22,4 +22,8 @@ The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.
 
 **Data Store:** An entire data repository, such as a relational database management system (RDBMS). Implemented in [[DataStore.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/database/DataStore.java]].
 
+**Partition:** A logical division of ground atoms in a data store. Implemented in [[Partition.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/database/Partition.java]].
+
+**Database:** A logical view of a data store, constructed by specifying a write partition and one or more read partitions of a data store. Implemented in [[Database.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/database/Database.java]].
+
 ## Machine Learning
