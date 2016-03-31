@@ -11,8 +11,7 @@ For read-write access:
 >> git clone git@github.com:linqs/psl.git
 ```
 
-## Building from source
-### Building PSL
+### Building PSL from source
 Change to the top-level directory of your working copy and run
 ```
 >> mvn compile
