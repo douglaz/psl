@@ -16,7 +16,7 @@ then
 ```
 
 
-### Preparing for pushing commits to the PSL repository or a fork on GitHub
+### Preparing to push a commit to the PSL repository or a fork on GitHub
 
 Create a free account on [GitHub](https://github.com). Then follow one of the following sets of instructions to set up Git and GitHub:
 
