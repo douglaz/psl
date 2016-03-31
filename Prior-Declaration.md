@@ -1,4 +1,4 @@
-The `add` method of PSLModel `model` (below) is used to specify a rule.
+The `add` method of a PSLModel `model` (below) is used to specify a rule.
 
 `m.add rule: ~<predicateName>, weight: <weight>;`
 
