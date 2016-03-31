@@ -5,17 +5,19 @@ Open up a command line terminal and type `java -version` to verify that you have
 If you don't have Java installed, download and install [Java](http://java.com/en/).
 
 ### Download the PSL jar file
-The PSL jar file "psl-cli-2.0-SNAPSHOT.jar" already contains all the core PSL source code you need to be able to run your PSL programs. You can find this jar file under [Downloads on our PSL webpage](http://psl.umiacs.umd.edu/downloads/)
+The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all the core PSL source code you need to be able to run your PSL programs. You can find this jar file under [Downloads on our PSL webpage](http://psl.umiacs.umd.edu/downloads/)
 ## Running your first program
-Let's first download the files for our example program, run it and see what it does! We will be working from the command line so open up your shell or terminal.
+Let's first download the files for our example program, run it and see what it does! 
+
+In this program, we'll use information about known locations of some people and friendship networks between people to collectively infer where some other people live. This form of inference is called collective classification. We'll first run the program and see the output. We will be working from the command line so open up your shell or terminal.
+
 ### Download the simple example
 You can download the files needed for our simple first example program on our "Downloads" page under [Simple CLI Example Files](http://psl.umiacs.umd.edu/downloads/simple_CLI_example)
-
-This will a create a new "PSLCLIFirstExample" directory in your current directory.
+This will a create a new `PSLCLIFirstExample` directory in your current directory.
 
 ### Run your first PSL program
 
-Change directories to the new "PSLCLIFirstExample" that was created in your current directory in your open command line shell. From there, run the following command:
+Change directories to the new `PSLCLIFirstExample` that was created in your current directory in your open command line shell. From there, run the following command:
 
 `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data`
 
@@ -51,18 +53,85 @@ operation::infer ::done
 ```
 
 ### What did it do?
+Now that we've run our first program that performs collective classification to infer where some people live based on some known facts about living locations and friendship links, let's understand how to define the underlying model, provide data to the model and infer the unknown values.
 
-#### Defined a model
+#### Model Definition
+A model in PSL is a set of weighted logical rules. 
+
+The model is defined inside a text file with the format `.psl`. We describe the collective location classification model in the file `simple_cc.psl`. Let's have a look at the rules that make up our model: 
+```
+10: Knows(P1,P2) & Lives(P1,L) -> Lives(P2,L) ^2
+10: Knows(P2,P1) & Lives(P1,L) -> Lives(P2,L) ^2
+2: ~Lives(P,L) ^2
+```
+The model is expressing the intuition that people that know one another live in the same location. 
+The integer values at the beginning of rules indicate the weight of the rule. Intuitively, this tells us the relative importance of satisfying this rule compared to the other rules.
+The `^2` at the end of the rules indicates that the hinge-loss functions based on groundings of these rules are squared, for a smoother tradeoff. For more details on hinge-loss functions and squared potentials, see the publications on our [PSL webpage](http://psl.umiacs.umd.edu). 
 
 #### Loaded data
+Logical rules consist of predicates. The names of the predicates used in our model and possible substitutions of these predicates with actual entities from our network are defined inside the file `simple_cc.data`. Let's have a look:
+```
+predicates:
+  Person/1: closed
+  Location/1: closed
+  Knows/2: closed
+  Lives/2: open
 
-#### Inferred missing values`
+observations:
+  Person : 
+  - person_obs.txt
+  - person_obs2.txt
+  Location : location_obs.txt
+  Knows : knows_obs.txt
+  Lives : lives_obs.txt
+
+targets: 
+  Lives : lives_targets.txt
+
+truth: 
+  Lives : lives_truth.txt
+```
+In the `predicate` section, we list all the predicates that will be used in logical rules that define the model. The keyword `open` indicates that we want to infer some substitutions of this predicate while `closed` indicates that this predicate is fully observed. I.e. all substitutions of this predicate have observed truth values and will behave as evidence for the open predicates. 
+
+For our simple example, we fully observe the network of people that know each other and thus, `knows` is a closed predicate. We know living locations for some of the people in the network but wish to infer the others, making `lives` a closed predicate.
+
+In the `observations` section, for each predicate for which we have observations, we specify the name of the `.txt` file containing the observations. For example, `knows_obs.txt` and `lives_obs.txt` specifies which people know each other and where some of these people live, respectively.
+
+The `targets` section specifies a `.txt` file that, for each open predicate, lists all substitutions of that predicate that we wish to infer. In `lives_targets.txt`, we specify the people whose location we want to infer based on the `knows` network and the known locations of some of the people.
+
+The `truth` section specifies a `.txt` file that provides a set of ground truth observations for each open predicate. Here, we give the actual values for the `lives` predicate for all the people in the network as training labels. We describe the the general data loading scheme in more detail in the sections below.
+
+#### Inferred missing values
+
+When we run the `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data` command with the `-infer` flag, PSL's inference engine substitutes values from the data files into the logical rules of the collective location classification model and infers whether entities `Steve` and `Alex` live in `Maryland`.
 
 ## Writing PSL rules
 
+To create a PSL model, you should define a set of logical rules in a `.psl` file. 
+
 ## Organizing your data 
+In a `.data` file, you should first define your `predicates:` as shown in the above example. Use the `open` and `closed` keywords to characterize each predicate.
+
+As shown above, then create your `observations:`, `targets:` and `truth:` sections that list the names of `.txt` files that specify the observed values for predicates, values you want to infer for open predicates and observed ground truth values for open predicates. 
+
+The target files tell PSL which substitutions of the predicates it needs to infer. The truth files provide training labels in order learn the weights of the rules directly from data. This is similar to learning the weights of coefficients in a logistic regression model from training data. Weight learning is described below in greater detail.
 
 ## Running inference
-- saving output
+
+Run inference with the general command:
+
+`java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model [name of model file].psl -data [name of data file].data`
+
+When we run inference, the inferred values are outputted to the screen as shown for our example above. You can save the outputs to a file and use the inferred values in various ways downstream: 
+- if you have a gold standard set of labels, you can evaluate your model by computing standard metrics like accuracy, AUC, f1, etc.
+- you may want to use the predicted outputs of PSL as inputs for another model.
+- you may want to visualize the predicted values and use the outputs of PSL as inputs to a data visualization program.
 
 ## Learning rule weights
+We see above that in our example, we explicitly stated the weights for each rule. Think of these weights as dictating the relative importance of each rule, just as the weights of logistic regression or SVM features. Instead of explicitly giving the weights, we can also learn the weights from training labels.
+
+To perform weight learning instead of inference, use the command:
+
+`java -jar psl-cli-2.0-SNAPSHOT.jar -learn -model [name of model file].psl -data [name of data file].data`
+
+PSL provides gradient-descent based weight learning algorithms that treat the files specified in the `truth:` section of your `.data` file as the training labels. 
