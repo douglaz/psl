@@ -2,13 +2,8 @@
 #### Cloning the PSL repository
 If you are already comfortable using [Git](http://git-scm.com/) and you don't want or need to push commits to GitHub, then you can just clone the PSL repository. Otherwise, this [[short primer | Using Git]] on some Git essentials may be useful.
 
-For read-only access:
 ```
->> git clone git://github.com/linqs/psl.git
-```
-For read-write access:
-```
->> git clone git@github.com:linqs/psl.git
+>> git clone https://github.com/linqs/psl.git
 ```
 
 ### Building PSL from source
