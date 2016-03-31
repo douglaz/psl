@@ -89,9 +89,9 @@ targets:
 truth: 
   Lives : lives_truth.txt
 ```
-In the `predicate` section, we list all the predicates that will be used in logical rules that define the model. The keyword `open` indicates that we want to infer some substitutions of this predicate while `closed` indicates that this predicate is fully observed. I.e. all substitutions of this predicate have observed truth values and will behave as evidence for the open predicates. 
+In the `predicate` section, we list all the predicates that will be used in logical rules that define the model. The keyword `open` indicates that we want to infer some substitutions of this predicate while `closed` indicates that this predicate is fully observed. I.e. all substitutions of this predicate have known values and will behave as evidence for inference. 
 
-For our simple example, we fully observe the network of people that know each other and thus, `knows` is a closed predicate. We know living locations for some of the people in the network but wish to infer the others, making `lives` a closed predicate.
+For our simple example, we fully observe the network of people that know each other and thus, `knows` is a closed predicate. We know living locations for some of the people in the network but wish to infer the others, making `lives` an open predicate.
 
 In the `observations` section, for each predicate for which we have observations, we specify the name of the `.txt` file containing the observations. For example, `knows_obs.txt` and `lives_obs.txt` specifies which people know each other and where some of these people live, respectively.
 
