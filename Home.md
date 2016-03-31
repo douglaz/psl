@@ -1,4 +1,4 @@
-Welcome to the wiki for the Probabilistic Soft Logic(PSL) software from the STATISTICAL RELATIONAL LEARNING GROUP [ LINQS | http://linqs.cs.umd.edu/projects/]at the University of Maryland and the University of California Santa Cruz.  
+Welcome to the wiki for the Probabilistic Soft Logic(PSL) software from the STATISTICAL RELATIONAL LEARNING GROUP [[ LINQS | http://linqs.cs.umd.edu/projects/]] at the University of Maryland and the University of California Santa Cruz.  
 
 First note: PSL has multiple interfaces
 - [[Command Line Interface for new users | GettingStarted:CLI]]
