@@ -18,22 +18,22 @@ First, add `psl-core` (and any other subprojects) as dependencies to your `pom.x
 </dependencies>
 ```
 
-Second, specify the location of the PSL Maven repository in your `pom.xml` file:
+Second, specify the location of the PSL Maven repository in your `pom.xml` file, anywhere within the `<project> </project>` tags:
 
 ```xml
 <repositories>
-		<repository>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>daily</updatePolicy>
-				<checksumPolicy>fail</checksumPolicy>
-			</releases>
-			<id>psl-releases</id>
-			<name>PSL Releases</name>
-			<url>https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/</url>
-			<layout>default</layout>
-		</repository>
-		<repository>
+	<repository>
+		<releases>
+			<enabled>true</enabled>
+			<updatePolicy>daily</updatePolicy>
+			<checksumPolicy>fail</checksumPolicy>
+		</releases>
+		<id>psl-releases</id>
+		<name>PSL Releases</name>
+		<url>https://scm.umiacs.umd.edu/maven/lccd/content/repositories/psl-releases/</url>
+		<layout>default</layout>
+	</repository>
+	<repository>
 		<releases>
 			<enabled>true</enabled>
 			<updatePolicy>daily</updatePolicy>
