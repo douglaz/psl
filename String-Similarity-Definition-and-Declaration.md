@@ -8,7 +8,7 @@ A customized similarity function can be created by implementing the `AttributeSi
 
 A function comparing the similarity between two entities or text can then be declared as follows:
 
-`m.add function: <functionName> , <arg1>: <EntityOfText>, <arg2>: <EntityOrText>, implementation: new <SimilarityFunction>()`
+`m.add function: <functionName> , implementation: new <SimilarityFunction>()`
 
 * `<functionName>` is the name of the function, e.g., `"sameName"`.
 * `<arg1>` and `<arg2>` are the identifiers for the function's arguments, e.g., `name1` and `name2`.
