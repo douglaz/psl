@@ -3,7 +3,7 @@ Predicates are added to a PSLModel `model` (below) by using its `add` method. <b
 `model.add predicate: <predicateName>, types: [<argumentTypeOne>,<argumentTypeTwo>]`<br/>
 
 * `<predicateName>` is the name of a predicate in quotes, e.g., `"authorName"`
-* `<argumentTypeOne>` is the type of argument accepted by this predicate. Possible types include: `
+* `<argumentTypeOne/Two>` is the type of argument accepted by this predicate. Possible types include: `
     * `ConstantType.Double`
     * `ConstantType.Integer`
     * `ConstantType.Long`
