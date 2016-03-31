@@ -1,6 +1,6 @@
 ### Setting up your environment
 #### Cloning the PSL repository
-If you are already comfortable using [Git](http://git-scm.com/) and you don't want or need to push commits to GitHub, then you can just clone the PSL repository.
+If you are already comfortable using [Git](http://git-scm.com/) and you don't want or need to push commits to GitHub, then you can just clone the PSL repository. Otherwise, this [short primer on some Git essentials | Using Git] may be useful.
 
 For read-only access:
 ```
@@ -23,7 +23,6 @@ You can install PSL to your local Maven repository by running
 ## Best practices
 
 ## Git policies
-- [[Using Git]]
 - [[Git policies]]
 
 
