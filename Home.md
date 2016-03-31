@@ -1,7 +1,7 @@
 ## Probabilistic Soft Logic (PSL) 
 
 ##Getting Started
-Welcome to the PSL Wiki. To get started with PSL you can follow one of these guides: 
+To get started with PSL you can follow one of these guides: 
 - [[Command Line Interface for New Users | GettingStarted:CLI]]: If you are new to PSL we suggest that you start with our Command Line Interface (CLI), which allows you to write a complete model in a simple text file. 
 
 <Beginning PSL for New Users
