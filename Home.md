@@ -1,4 +1,4 @@
-##Welcome to the wiki for the Probabilistic Soft Logic (PSL) software. 
+## Probabilistic Soft Logic (PSL) software Wiki. 
 
 ##Getting Started
 To get started with PSL you can follow one of these guides: 
