@@ -16,6 +16,7 @@ This will a create a new "PSLCLIFirstExample" directory in your current director
 ### Run your first PSL program
 
 Change directories to the new "PSLCLIFirstExample" that was created in your current directory in your open command line shell. From there, run the following command:
+
 `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data`
 
 You should now see output that looks like this: 
@@ -49,10 +50,13 @@ LOCATION(Maryland) = 1.0
 operation::infer ::done
 ```
 
-- What did it do?
-   - Defined a model
-   - Loaded data
-   - Inferred missing values`
+### What did it do?
+
+#### Defined a model
+
+#### Loaded data
+
+#### Inferred missing values`
 
 ## Writing PSL rules
 
