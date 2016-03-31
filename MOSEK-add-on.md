@@ -1,4 +1,4 @@
-[MOSEK](http://www.mosek.com/) is software for numeric optimization. PSL can use MOSEK as a conic program solver via a PSL [[add on | add ons]].
+[MOSEK](http://www.mosek.com/) is software for numeric optimization. PSL can use MOSEK as a conic program solver via a PSL add on.
 
 ### Setting up the MOSEK add on
 
