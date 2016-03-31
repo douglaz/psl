@@ -1,4 +1,4 @@
-The `add` method of `PSLModel` (`model` below) is used to specify a rule.
+The `add` method of `PSLModel` `model` (below) is used to specify a rule.
 
 `model.add rule : ( B1(V1,V2) & B2(V3,V4) & ... & B5(V5,V6) ) >> H(V1,V3,V6), weight : <weight>`
 
