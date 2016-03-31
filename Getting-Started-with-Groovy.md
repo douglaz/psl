@@ -1,18 +1,5 @@
 ### Setup
-- **Verify Java is installed**
-
-Open up your terminal and type
-    <code>java -version</code>
-You should see something like:
-
-<code>java version "1.x.0_y"</code>.
-   
-
-If you see
-
-<code>java: command not found</code>
-
-please [[download and install Java| https://java.com/en/download/]]. 
+PSL requires that you have [[Java installed| Install Java]]. 
 - **Install maven**
 
 PSL uses [Maven](http://maven.apache.org) to manage builds and dependencies. Users should [install Maven 3.x](http://maven.apache.org/download.html). PSL is developed with Maven and PSL programs are created as Maven projects. See [running Maven](http://maven.apache.org/run-maven/index.html) for help using Maven to build projects.
