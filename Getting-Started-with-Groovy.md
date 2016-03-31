@@ -1,23 +1,23 @@
-## Setup
+### Setup
 - Verify Java is installed
 - Install maven
 - [[Installation prerequisites | prerequisites]]
 
-## Looking at a basic example
+### Looking at a basic example
 - [[Installing examples]]
 - [[Basic example]]
 
-## Creating a new Groovy project
+### Creating a new Groovy project
 - [[Creating a new project]]
 
-## Groovy Syntax
+### Groovy Syntax
 - [[PSL Groovy syntax]]
 
-## Running a Groovy PSL program
+### Running a Groovy PSL program
 - [[Running a program]]
 
-## [[Advanced Topics]]
+### [[Advanced Topics]]
 
-## Additional examples
+### Additional examples
 - [[Ontology alignment example]]
 - [[External functions example]]
