@@ -38,7 +38,7 @@ Visit the [[getting started]] guide to use the PSL software.
 - [[Change log]]
 
 ### Groovy PSL
-- [[PSL Groovy syntax]]
+
 
 ### Development 
 - [[Building PSL from source code | Building PSL]]
