@@ -1,5 +1,7 @@
-## Data Management Concepts
+The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.04406]], and introduces new ones for advanced data management and machine learning. On this page, we define the commonly used terms and point out the corresponding classes in the codebase.
 
-## Logical Concepts
+### Data Management Concepts
 
-## Machine Learning Concepts
+### Logical Concepts
+
+### Machine Learning Concepts
