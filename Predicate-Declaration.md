@@ -16,7 +16,7 @@ An example of a declaration of a predicate that represents an author's name is:
 
 An example of a predicate that represents a friendship between two people is: 
 
-`model.add predicate: "Friends", types: [ConstantType.UniqueID,ConstantType.UniqueID]`
+`model.add predicate: "Friends", types: [ConstantType.UniqueID, ConstantType.UniqueID]`
 
 To take a look at the relevant code look [[here| https://github.com/linqs/psl/blob/develop/psl-core/src/main/java/edu/umd/cs/psl/model/term/ConstantType.java]]. 
 
