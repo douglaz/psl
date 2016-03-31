@@ -11,6 +11,8 @@
 - [[PSL Groovy syntax]]
 
 ## Running a Groovy PSL program
+- [[Running a program]]
+
 
 ## [[Advanced Topics]]
 
