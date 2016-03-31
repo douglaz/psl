@@ -1,18 +1,33 @@
-Welcome to the wiki for the Probabilistic Soft Logic (PSL) software. 
+#Welcome to the wiki for the Probabilistic Soft Logic (PSL) software. 
 
-PSL is a machine learning framework for developing probabilistic models developed by the Statistical Relational Learning Group [[ LINQS | http://linqs.cs.umd.edu/projects/]] at the University of Maryland and the University of California Santa Cruz. PSL models are easy and fast: you can define them using a straightforward logical syntax and solve them with fast convex optimization. 
 
+##Getting Started
 To get started with PSL you can follow one of these guides: 
-- Basic guide for beginners. If you are new to PSL we suggest that you start with our Command Line Interface (CLI), which allows you to write a complete PSL model in a simple text file. [[Command Line Interface for new users | GettingStarted:CLI]]
-- If you are comfortable with Java/Groovy, and want to get your hands dirty with complete PSL modeling capabilities we recommend that you use our Groovy interface.  [[Groovy for power users | Getting Started with Groovy]]
-- If you plan on using PSL for your own applications, and will need direct access to Java, please refer to our guide: [[Java for application developers | GettingStarted:Java]].
+- _If_  you are new to PSL we suggest that you start with our Command Line Interface (CLI), which allows you to write a complete PSL model in a simple text file. [[Command Line Interface for New Users | GettingStarted:CLI]] 
+
+Beginning PSL for New Users
+CLI for New Users
+Basic PSL for Beginners GettingStarted:CLI
+
+- _If_  you are comfortable with Java/Groovy, and want to get your hands dirty with advanced modeling capabilities we recommend that you use our Groovy interface. [[Groovy for Intermediate Users | Getting Started with Groovy]] 
+
+Or Groovy for People with Programming Background
+PSL for Users with Coding Experience
+Intermediate PSL for Programmers GettingStarted:Groovy
+
+- _If_ you plan on using PSL for your own applications, and will need direct access to Java, refer to this guide.
+[[Java for Application Developers | GettingStarted:Java]] 
+Advanced PSL for Application Developers GettingStarted:Java
+PSL for Application Developers
 
 For all users, you need Java. Here's are instructions to [download and install Java | prereqs:InstallingJava]
 
-If you would like to start by reading papers and projects using PSL, try the [ PSL homepage | http://psl.umiacs.umd.edu ]
+##Learn More About PSL
+PSL is a machine learning framework for developing probabilistic models developed by the Statistical Relational Learning Group [[ LINQS | http://linqs.cs.umd.edu/projects/]] at the University of Maryland and the University of California Santa Cruz. PSL models are easy and fast: you can define them using a straightforward logical syntax and solve them with fast convex optimization. If you would like to start by reading papers and projects using PSL, try the [ PSL homepage | http://psl.umiacs.umd.edu ]
 
-Migration Guide: migrating from PSL 1.0 to PSL 2.0
-Developing PSL Guide
+We are improving PSL all the time, and now have two versions! If you are migrating from PSL 1.0 to 2.0 please refer to our Migration Guide.
+
+[[Developing PSL Guide| DevelopingPSL]]
 
 
 
