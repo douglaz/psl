@@ -1,7 +1,7 @@
 # Getting Started with the Command Line Interface
 ## Setup
 ### Verify you have Java installed
-Open up a command line terminal and type "java -version" to verify that you have Java installed. Any version of Java will be fine.
+Open up a command line terminal and type `java -version` to verify that you have Java installed. Any version of Java will be fine.
 If you don't have Java installed, download and install [Java](http://java.com/en/).
 
 ### Download the PSL jar file
@@ -15,7 +15,8 @@ This will a create a new "PSLCLIFirstExample" directory in your current director
 
 ### Run your first PSL program
 
-Change directories to the new "PSLCLIFirstExample" that was created in your current directory in your open command line shell. From there, run the following command "java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data"
+Change directories to the new "PSLCLIFirstExample" that was created in your current directory in your open command line shell. From there, run the following command:
+`java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data`
 
 You should now see output that looks like this: 
 
