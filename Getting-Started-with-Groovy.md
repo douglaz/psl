@@ -9,7 +9,7 @@
 
 ## Running a Groovy PSL program
 
-## Advanced Topics
+## [[Advanced Topics]]
 
 ## Additional examples
 - [[Ontology alignment example]]
