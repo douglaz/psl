@@ -3,9 +3,7 @@
 - Install maven
 
 ## Looking at a basic example
-- Installing the basic example
-- Running the basic example
-- A walkthrough of the basic example
+- [[Basic example]]
 
 ## Creating a new Groovy project
 
@@ -14,3 +12,5 @@
 ## Advanced Topics
 
 ## Additional examples
+- [[Ontology alignment example]]
+- [[External functions example]]
