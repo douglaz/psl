@@ -2,7 +2,7 @@ The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.
 
 ## Preliminaries
 
-**Hinge-loss Markov random field:** A 
+**Hinge-loss Markov random field:** A factor graph defined over _continuous_ variables in the [0,1] interval with (log) factors that are hinge-loss functions. Many classes in PSL work together to implement the functionality of HL-MRFs, but the class for storing collections of hinge-loss potentials, which define HL-MRFs, is [[GroundRuleStore.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/application/groundrulestore/GroundRuleStore.java]].
 
 ## Syntax
 
