@@ -1,4 +1,5 @@
 
+Welcome to the PSL software Wiki!
 
 ##Getting Started with Probabilistic Soft Logic 
 To get started with PSL you can follow one of these guides: 
