@@ -6,13 +6,13 @@
 - [[Basic example]]
 
 ## Creating a new Groovy project
+- [[Creating a new project]]
 
 ## Groovy Syntax
 - [[PSL Groovy syntax]]
 
 ## Running a Groovy PSL program
 - [[Running a program]]
-
 
 ## [[Advanced Topics]]
 
