@@ -53,9 +53,9 @@ operation::infer ::done
 ```
 
 ### What did it do?
-Now that we've run our first program that performs collective classification to infer where some people live based on some known facts about living locations and friendship links, let's understand how to define the underlying model, provide data to the model and infer the unknown values.
+Now that we've run our first program that performs collective classification to infer where some people live based on some known facts about living locations and friendship links, let's understand the steps that we went through to infer the unknown values: defines the underlying model, provided data to the model and ran inference to classify the unknown values.
 
-#### Model Definition
+#### Defining a Model
 A model in PSL is a set of weighted logical rules. 
 
 The model is defined inside a text file with the format `.psl`. We describe the collective location classification model in the file `simple_cc.psl`. Let's have a look at the rules that make up our model: 
@@ -68,7 +68,7 @@ The model is expressing the intuition that people that know one another live in 
 The integer values at the beginning of rules indicate the weight of the rule. Intuitively, this tells us the relative importance of satisfying this rule compared to the other rules.
 The `^2` at the end of the rules indicates that the hinge-loss functions based on groundings of these rules are squared, for a smoother tradeoff. For more details on hinge-loss functions and squared potentials, see the publications on our [PSL webpage](http://psl.umiacs.umd.edu). 
 
-#### Loaded data
+#### Loading the Data
 Logical rules consist of predicates. The names of the predicates used in our model and possible substitutions of these predicates with actual entities from our network are defined inside the file `simple_cc.data`. Let's have a look:
 ```
 predicates:
@@ -101,22 +101,22 @@ The `targets` section specifies a `.txt` file that, for each open predicate, lis
 
 The `truth` section specifies a `.txt` file that provides a set of ground truth observations for each open predicate. Here, we give the actual values for the `lives` predicate for all the people in the network as training labels. We describe the the general data loading scheme in more detail in the sections below.
 
-#### Inferred missing values
+#### Inferring the Missing Values
 
 When we run the `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data` command with the `-infer` flag, PSL's inference engine substitutes values from the data files into the logical rules of the collective location classification model and infers whether entities `Steve` and `Alex` live in `Maryland`.
 
-## Writing PSL rules
+## Writing PSL Rules
 
 To create a PSL model, you should define a set of logical rules in a `.psl` file. 
 
-## Organizing your data 
+## Organizing your Data 
 In a `.data` file, you should first define your `predicates:` as shown in the above example. Use the `open` and `closed` keywords to characterize each predicate.
 
 As shown above, then create your `observations:`, `targets:` and `truth:` sections that list the names of `.txt` files that specify the observed values for predicates, values you want to infer for open predicates and observed ground truth values for open predicates. 
 
 The target files tell PSL which substitutions of the predicates it needs to infer. The truth files provide training labels in order learn the weights of the rules directly from data. This is similar to learning the weights of coefficients in a logistic regression model from training data. Weight learning is described below in greater detail.
 
-## Running inference
+## Running Inference
 
 Run inference with the general command:
 
@@ -127,7 +127,7 @@ When we run inference, the inferred values are outputted to the screen as shown 
 - you may want to use the predicted outputs of PSL as inputs for another model.
 - you may want to visualize the predicted values and use the outputs of PSL as inputs to a data visualization program.
 
-## Learning rule weights
+## Learning Rule Weights
 We see above that in our example, we explicitly stated the weights for each rule. Think of these weights as dictating the relative importance of each rule, just as the weights of logistic regression or SVM features. Instead of explicitly giving the weights, we can also learn the weights from training labels.
 
 To perform weight learning instead of inference, use the command:
