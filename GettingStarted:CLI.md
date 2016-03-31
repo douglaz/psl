@@ -1,11 +1,9 @@
 # Getting Started with the Command Line Interface
 ## Setup
-### Verify you have Java installed
-Open up a command line terminal and type `java -version` to verify that you have Java installed. Any version of Java will be fine.
-If you don't have Java installed, download and install [Java](http://java.com/en/).
 
-### Download the PSL jar file
-The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all the core PSL source code you need to be able to run your PSL programs. You can find this jar file under [Downloads on our PSL webpage](http://psl.umiacs.umd.edu/downloads/).
+PSL requires that you have [[Java installed | Install Java ]]. 
+
+The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find this `.jar` file under [Downloads on our PSL webpage](http://psl.umiacs.umd.edu/downloads/).
 ## Running your first program
 Let's first download the files for our example program, run it and see what it does! 
 
