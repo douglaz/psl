@@ -47,6 +47,8 @@ Second, specify the location of the PSL Maven repository in your `pom.xml` file,
 </repositories>
 ```
 
+Maven will now make the the required PSL libraries and their dependencies available when compiling and running your project.
+
 ## The PSL API
 
 ## Example?
