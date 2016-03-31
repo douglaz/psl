@@ -1,5 +1,5 @@
 ### Setup
-PSL requires that you have [[Java installed| Install Java]]. To use the Groovy interface it is also required that you [[Install Maven| Install Maven]].
+PSL requires that you have [[Java installed| Install Java]]. To use the Groovy interface it is also required that you [[install maven| Install Maven]].
 
 ### Looking at a basic example
 - [[Installing examples]]
