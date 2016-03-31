@@ -11,7 +11,6 @@ A function comparing the similarity between two entities or text can then be dec
 `m.add function: <functionName> , implementation: new <SimilarityFunction>()`
 
 * `<functionName>` is the name of the function, e.g., `"sameName"`.
-* `<arg1>` and `<arg2>` are the identifiers for the function's arguments, e.g., `name1` and `name2`.
 * `<SimilarityFunction>` is the name of the class implementing the `AttributeSimilarityFunction` interface, e.g., `MyStringSimilarity`.
 
 A function can be used in the same manner as a predicate in rules.
