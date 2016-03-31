@@ -2,19 +2,19 @@
 
 ##Getting Started
 To get started with PSL you can follow one of these guides: 
-- [[Command Line Interface for New Users | GettingStarted:CLI]] If you are new to PSL we suggest that you start with our Command Line Interface (CLI), which allows you to write a complete model in a simple text file. 
+- [[Command Line Interface for New Users | GettingStarted:CLI]]: If you are new to PSL we suggest that you start with our Command Line Interface (CLI), which allows you to write a complete model in a simple text file. 
 
 <Beginning PSL for New Users
 CLI for New Users
 Basic PSL for Beginners GettingStarted:CLI>
 
-- [[Groovy for Intermediate Users | Getting Started with Groovy]] If you are comfortable with Java/Groovy, and want to get your hands dirty with advanced modeling capabilities we recommend that you use our Groovy interface. 
+- [[Groovy for Intermediate Users | Getting Started with Groovy]]: If you are comfortable with Java/Groovy, and want to get your hands dirty with advanced modeling capabilities we recommend that you use our Groovy interface. 
 
 <Or Groovy for People with Programming Background
 PSL for Users with Coding Experience
 Intermediate PSL for Programmers GettingStarted:Groovy>
 
-- [[Java for Application Developers | Getting Started with Java]] If you plan on using PSL for your own applications, and will need direct access to Java, refer to this guide.
+- [[Java for Application Developers | Getting Started with Java]]: If you plan on using PSL for your own applications, and will need direct access to Java, refer to this guide.
 
 <Advanced PSL for Application Developers GettingStarted:Java
 PSL for Application Developers>
