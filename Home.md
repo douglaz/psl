@@ -1,4 +1,4 @@
-
+##Probabilistic Soft Logic (PSL)
 
 ##Getting Started
 To get started with PSL you can follow one of these guides: 
