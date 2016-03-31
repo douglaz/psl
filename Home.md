@@ -2,6 +2,7 @@ First note: PSL has multiple interfaces
 - [[Command Line Interface for new users | GettingStarted:CLI]]
 - [[Groovy for power users | GettingStarted:Groovy]]
 - [[Java for application developers | GettingStarted:Java]]
+
 For all users, you need Java. Here's are instructions to [download and install Java | prereqs:InstallingJava]
 
 If you would like to start by reading papers and projects using PSL, try the [ PSL homepage | http://psl.umiacs.umd.edu ]
