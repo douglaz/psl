@@ -5,7 +5,7 @@ Open up your terminal and type
     <code>java -version</code>
 You should see something like:
 
-<code>java version "1.7.0_80"</code>.
+<code>java version "1.x.0_y"</code>.
    
 
 If you see
