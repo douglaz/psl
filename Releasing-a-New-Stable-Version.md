@@ -5,7 +5,7 @@ This a HOWTO on releasing a new stable PSL version. All first and second level h
 ## Get the Code Ready
 A release is a single commit that increments the software's version number to a stable version number and does nothing else. So, before you release a version, make sure all your changes are committed and pushed, and the code is in the state in which you want to release it. 
 
-Make sure the [[copyright notices | Changing the Copyright Notice]] are up to date.
+Make sure the [[copyright notices | Updating the Copyright Notice]] are up to date.
 
 ## Test the Code
 Remember to test the code and double check it is ready for release. To complete a release build, you will need all dependencies used by PSL even if not used by your changes, for example the [[MOSEK add-on | MOSEK-add-on]]. Make sure there are no errors or bugs.
@@ -25,7 +25,7 @@ The git branch the code is on (the working branch) should already have a version
 # Create the Stable Release
 
 ## Change the Version
-The first step is to [[change the version number | Changing the version number]] to the stable version number. Remember to perform the commit at the end of the instructions.
+The first step is to [[change the version number | Updating the version number]] to the stable version number. Remember to perform the commit at the end of the instructions.
 
 ## Tag the New Stable Version
 Run the following two commands:
@@ -89,7 +89,7 @@ Subject: New Version: x.y.z
 
 A new stable version of PSL, version x.y.z (https://github.com/linqs/psl/tree/x.y.z) is now available.
 
-See https://github.com/linqs/psl/wiki/Changing-versions for instructions on changing your PSL projects to the new version.
+See [[switching the PSL version your program uses]] for instructions on changing your PSL projects to the new version.
 
 In version x.y.z:
 [A list of the main changes]
