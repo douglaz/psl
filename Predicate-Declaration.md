@@ -9,9 +9,7 @@ Predicates are added to a PSLModel `model` (below) by using its `add` method. <b
     * `ConstantType.Long`
     * `ConstantType.String`
     * `ConstantType.Date`   
-    
 
 An example of a declaration of a predicate that represents an author's name is: <br/><br/>
-
 `model.add predicate: "authorName" , types: [ConstantType.String]`
 
