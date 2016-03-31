@@ -27,7 +27,7 @@ PSL is a machine learning framework for developing probabilistic models develope
 
 We are improving PSL all the time, and now have two versions! If you are migrating from PSL 1.0 to 2.0 please refer to our Migration Guide.
 
-[[Developing PSL Guide| DevelopingPSL]]
+[[Developing PSL Guide| Developing PSL]]
 
 
 
