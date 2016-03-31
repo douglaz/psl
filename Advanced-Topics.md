@@ -2,5 +2,7 @@
 - [[Logging]]
 - [[Eclipse integration]]
 - [[Running a PSL program as a Markov Logic program ]]
+- [[Versions]]
+- [[Changing versions]]
 - Add-ons
   - [[MOSEK add-on]]
