@@ -12,8 +12,15 @@ For read-write access:
 ```
 
 ## Building from source
-- [[Building PSL from source code | Building PSL]]
-
+### Building PSL
+Change to the top-level directory of your working copy and run
+```
+>> mvn compile
+```
+You can install PSL to your local Maven repository by running
+```
+>> mvn install
+```
 ## Best practices
 
 ## Git policies
