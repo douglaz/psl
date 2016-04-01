@@ -130,8 +130,12 @@ Run inference with the general command:
 
 `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model [name of model file].psl -data [name of data file].data`
 
-When we run inference, the inferred values are outputted to the screen as shown for our example above. You can save the outputs to a file and use the inferred values in various ways downstream: 
-- if you have a gold standard set of labels, you can evaluate your model by computing standard metrics like accuracy, AUC, f1, etc.
+When we run inference, the inferred values are outputted to the screen as shown for our example above. If you want to write the outputs to a file and use the inferred values in various ways downstream, you can use:
+
+`java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model [name of model file].psl -data [name of data file].data -output [directory to write output files]`
+
+With the inferred values, some downstream tasks that you can perform are:
+- if you have a gold standard set of labels, you can evaluate your model by computing standard metrics like accuracy, AUC, F1, etc.
 - you may want to use the predicted outputs of PSL as inputs for another model.
 - you may want to visualize the predicted values and use the outputs of PSL as inputs to a data visualization program.
 
