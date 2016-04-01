@@ -21,4 +21,4 @@ After weight learning, the learned `PSLModel` can be printed using `println mode
 To see the weight learning code look [[here | https://github.com/linqs/psl/tree/develop/psl-core/src/main/java/edu/umd/cs/psl/application/learning/weight]]. 
 
 ##Example
-
+Let's say you are trying to learn the 
