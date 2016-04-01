@@ -105,14 +105,24 @@ When we run the `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl 
 
 ## Writing PSL Rules
 
-To create a PSL model, you should define a set of logical rules in a `.psl` file. 
+To create a PSL model, you should define a set of weighted logical rules in a `.psl` file. Let's go over the basic logical syntax to write rules. Consider this very general rule form:
+
+` w: P(A,B) & Q(B,C) -> R(A,C) ^2  `
+
+The first part of the rule, `w`, is an integer value that specifies the weight of the rule. In this example, `P`, `Q` and `R` are predicates. Logical rules consist of the rule "body" and rule "head." The body of the rule appears before the `->` which denotes logical implication. The body can have one or more predicates conjuncted together with the `&` that denotes logical conjunctions. The head of the rule should be a single predicate. The predicates that appear in the body and head can be any combination of open and closed predicate types.
+
+To see more examples of logically templated models in the command line interface, see the [[Command Line Interface Examples | CLI Examples ]]. For best practices, tips and tricks to design good, semantically meaningful models, see our [[Modeling Tips and Tricks | Modeling Tips and Tricks]]. 
 
 ## Organizing your Data 
-In a `.data` file, you should first define your `predicates:` as shown in the above example. Use the `open` and `closed` keywords to characterize each predicate.
+In a `.data` file, you should first define your `predicates:` as shown in the above example. Use the `open` and `closed` keywords to characterize each predicate. 
+
+An `closed` predicate is a predicate whose values are always observed. For example, the `knows` predicate from the simple example is closed because we fully observe the entire network of people that know one another. On the other hand, an `open` predicate is a predicate where some values may be observed, but some values are missing and thus, need to be inferred.  
 
 As shown above, then create your `observations:`, `targets:` and `truth:` sections that list the names of `.txt` files that specify the observed values for predicates, values you want to infer for open predicates and observed ground truth values for open predicates. 
 
-The target files tell PSL which substitutions of the predicates it needs to infer. The truth files provide training labels in order learn the weights of the rules directly from data. This is similar to learning the weights of coefficients in a logistic regression model from training data. Weight learning is described below in greater detail.
+For all predicates, all possible substitutions should be specified either in the target files or in the observation files. The observations files should contain the known values for all closed predicates and can contain some of the known values for the open predicates. The target files tell PSL which substitutions of the open predicates it needs to infer. Target files cannot be specified for closed predicates as they are fully observed. 
+
+The truth files provide training labels in order learn the weights of the rules directly from data. This is similar to learning the weights of coefficients in a logistic regression model from training data. Weight learning is described below in greater detail.
 
 ## Running Inference
 
@@ -131,5 +141,7 @@ We see above that in our example, we explicitly stated the weights for each rule
 To perform weight learning instead of inference, use the command:
 
 `java -jar psl-cli-2.0-SNAPSHOT.jar -learn -model [name of model file].psl -data [name of data file].data`
+
+Running the weight learning command outputs a `.psl` model file with the learned weights and logical rules. You can use this produced model file for running inference with the learned model.
 
 PSL provides gradient-descent based weight learning algorithms that treat the files specified in the `truth:` section of your `.data` file as the training labels. 
