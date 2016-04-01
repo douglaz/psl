@@ -1,4 +1,3 @@
-# Getting Started with the Command Line Interface
 ## Setup
 
 PSL requires that you have [[Java installed | Install Java ]]. 
