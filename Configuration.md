@@ -20,7 +20,7 @@ A simple way to specify bundles is in a file named `psl.properties` on the class
 # The top levels are called bundles. Use the ConfigManager class to access them.
 
 # Weight learning parameters
-# Parameters for SGD based voted perceptron algorithm
+# Parameters for voted perceptron algorithm
 # This property adaptively changes the step size of the updates
 example.votedperceptron.schedule = true
 
