@@ -26,6 +26,7 @@ PSL requires Java, so before you start make sure that you have [[Java|https://ja
 PSL is a machine learning framework for building probabilistic models developed by the Statistical Relational Learning Group [[ LINQS | http://linqs.cs.umd.edu/projects/]] at the University of Maryland and the University of California Santa Cruz. PSL has produced state-of-the-art results in many areas spanning natural language processing, social-network analysis, and computer vision. The complete list of publications and projects is available on the [[PSL homepage | http://psl.cs.umd.edu ]].
 
 ##Resources
+### [[Examples | Example PSL Programs]]
 ###[[Migration Guide | Migrating to PSL 2]]
 We are improving PSL all the time, and now have two versions! If you are migrating from PSL 1.0 to 2.0 please refer to our Migration Guide.
 
