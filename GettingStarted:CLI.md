@@ -134,6 +134,8 @@ When we run inference, the inferred values are outputted to the screen as shown 
 
 `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model [name of model file].psl -data [name of data file].data -output [directory to write output files]`
 
+Values for all predicates will be output as `.csv` files in the specified output directory.
+
 With the inferred values, some downstream tasks that you can perform are:
 - if you have a gold standard set of labels, you can evaluate your model by computing standard metrics like accuracy, AUC, F1, etc.
 - you may want to use the predicted outputs of PSL as inputs for another model.
