@@ -30,7 +30,7 @@ To create the targetDatabase we do the following:
 
 Notice that samePerson is not included in the list of closed predicates.
 
-To create the groundTruthDatabase we do the following: 
+To create the groundTruthDatabase we first load all known ```samePerson ``` values into trueDataPartition. We then create the database as follows:
 
  ```Database trueDataDB = data.getDatabase(trueDataPartition, [samePerson] as Set);```
 
