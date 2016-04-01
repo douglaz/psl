@@ -9,7 +9,6 @@ https://github.com/linqs/psl/wiki/Logging
 Fix:
 
 https://github.com/linqs/psl/wiki/Database-creation	
-
 https://github.com/linqs/psl/wiki/Weight-Learning
 
 Update:
