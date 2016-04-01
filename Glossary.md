@@ -6,7 +6,7 @@ The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.
 
 **Ground atom:** A logical relationship corresponding to a random variable in a HL-MRF. For example, `Friends("Steve", "Jay")` is an alias for a specific random variable. Implemented in [[GroundAtom.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/atom/GroundAtom.java]]
 
-**Random variable atom:** A ground atom that 
+**Random variable atom:** A ground atom that is unobserved, i.e., no value is known for it. A HL-MRF assigns probability densities to assignments to random variable atoms. Implemented in [[RandomVariableAtom.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/atom/RandomVariableAtom.java]]
 
 ## Syntax
 
