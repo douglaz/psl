@@ -2,7 +2,7 @@ The job of a Weight Learning Application is to **use data** to learn the weights
 
 In weight learning we follow the structure below:
 
-```<WeightLearningApplication weightLearner> = new <WeightLearningApplication>(<model>, <targetDatabase>, <groundTruthDatabase>, <config>)```
+```<WeightLearningApplication> weightLearner = new <WeightLearningApplication>(<model>, <targetDatabase>, <groundTruthDatabase>, <config>)```
 
 - ```<model>``` is the model specified by your PSL program. 
 - ```<targetDatabase>``` is a database which contains all of the atoms for which you would like to infer values. When you create this database, the target atoms will be open. 
