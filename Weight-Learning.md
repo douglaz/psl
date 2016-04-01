@@ -6,7 +6,7 @@ In weight learning we follow the structure below:
 
 - ```<model>``` is the model specified by your PSL program. 
 - ```<targetDatabase>``` is a database which contains all of the atoms for which you would like to infer values. When you create this database, the target atoms will be open. 
-- ```<groundTruthDatabase>``` is a database which contains the known values of the atoms for which you are inferring values in the targetDatabase.
+- ```<groundTruthDatabase>``` is a database which contains the known values of the atoms for which you are inferring values in the targetDatabase. When you create this database these atoms will be closed. 
 - ```<config>``` is your [[config bundle | Configuration]]. 
 
 A Weight Learning Application is one of the following: 
