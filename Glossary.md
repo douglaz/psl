@@ -30,8 +30,8 @@ The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.
 
 **Database:** A logical view of a data store, constructed by specifying a write partition and one or more read partitions of a data store. Implemented in [[Database.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/database/Database.java]].
 
-**Open Predicate:** A predicate whose atoms can be unobserved.The only time a ground atom will be loaded as a random variable atom is when it is stored in the database's write partition and its predicate is _not_ specified as closed. Otherwise it will be loaded as an observed atom. Whether a predicate is open or closed is specific to each database.
+**Open Predicate:** A predicate whose atoms can be random variable atoms, i.e., unobserved.The only time a ground atom will be loaded as a random variable atom is when it is stored in the database's write partition and its predicate is _not_ specified as closed. Otherwise it will be loaded as an observed atom. Whether a predicate is open or closed is specific to each database.
 
-**Closed Predicate:** A predicate whose atoms are always observed. The only time a ground atom will be loaded as a random variable atom is when it is stored in the database's write partition and its predicate is _not_ specified as closed. Otherwise it will be loaded as an observed atom. Whether a predicate is open or closed is specific to each database.
+**Closed Predicate:** A predicate whose atoms are always observed atoms. The only time a ground atom will be loaded as a random variable atom is when it is stored in the database's write partition and its predicate is _not_ specified as closed. Otherwise it will be loaded as an observed atom. Whether a predicate is open or closed is specific to each database.
 
 ## Machine Learning
