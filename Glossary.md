@@ -12,6 +12,8 @@ Please note that this page is organized conceptually, not alphabetically.
 
 **Observed atom:** A ground atom that has an observed, immutable value. HL-MRFs are conditioned on observed atoms. Implemented in [[ObservedAtom.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/atom/ObservedAtom.java]]
 
+**Atom:** A generalization of ground atoms that allow logical variables as placeholders for constant arguments. For example, `Friends("Steve", A)` is a placeholder for all the ground atoms that can be obtained by substituting constants for the logical variable `A`. Implemented in [[Atom.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/atom/Atom.java]]
+
 ## Syntax
 
 **PSL Program:** A set of rules, each of which is a template for hinge-loss potentials or hard linear constraints. When grounded over a base of ground atoms, a PSL program induces a HL-MRF conditioned on any specified observations. Implemented in [[Model.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/Model.java]]
