@@ -1,4 +1,7 @@
-Many components of the PSL software have modifiable parameters and options, called properties. Every property has a key, which is a string that should uniquely identify it. These keys are organized into a namespace hierarchy, with each level separated by dots, e.g., `conicreasoner.distribution` is the type of probability distribution used by the `edu.umd.cs.psl.reasoner.ConicReasoner` class. Every property has a type and a default value, which is the value the object will use unless a user overrides it. Every class with properties documents them by declaring their keys as public static final Strings, with Javadoc describing the corresponding property's type and semantics. Another public static final member declares the default value for that property.
+Many components of the PSL software have modifiable parameters and options, called properties. Every property has a key, which is a string that should uniquely identify it. 
+These keys are organized into a namespace hierarchy, with each level separated by dots, e.g., `votedperceptron.stepsize` is the size of the gradient descent update step in the `edu.umd.cs.psl.application.learning.weight.maxlikelihood.VotedPerceptron` weight learning class. 
+
+Every property has a type and a default value, which is the value the object will use unless a user overrides it. Every class with properties documents them by declaring their keys as public static final Strings, with Javadoc describing the corresponding property's type and semantics. Another public static final member declares the default value for that property.
 
 ### Bundles
 
@@ -16,14 +19,24 @@ A simple way to specify bundles is in a file named `psl.properties` on the class
 # Options are specified in a namespace hierarchy, with levels separated by '.'.
 # The top levels are called bundles. Use the ConfigManager class to access them.
 
-# This line specifies an enum value
-example.conicreasoner.distribution = linear
+# Weight learning parameters
+# Parameters for SGD based voted perceptron algorithm
+# This property adaptively changes the step size of the updates
+example.votedperceptron.schedule = true
 
-# This line specifies a factory value (see edu.umd.cs.psl.config.Factory)
-example.conicreasoner.conicprogramsolver = edu.umd.cs.psl.optimizer.conic.ipm.HomogeneousIPMFactory
+# This property specifies the number of iterations of voted perceptron updates
+example.votedperceptron.numsteps = 700
 
-# This line specifies a double value, but in a DIFFERENT bundle!
-secondExample.hipm.sigthreshold = 10e-6
+# This property specifies the initial step size of the voted perceptron updates
+example.votedperceptron.stepsize = .1
+
+# Parameters for the Hard-EM weight learning algorithm
+# This property specifies the number of Hard-EM updates
+example.em.iterations = 1000
+
+# This property specifies the tolerance to check for convergence for Hard-EM
+example.em.tolerance = 1e-5
+
 ```
 
 ### The ConfigManager object
