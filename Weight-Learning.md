@@ -34,4 +34,4 @@ To create the groundTruthDatabase we first load all known ```samePerson ``` valu
 
  ```Database trueDataDB = data.getDatabase(trueDataPartition, [samePerson] as Set);```
 
-Notice that samePerson(), is now included in the list of closed atoms. 
+Notice that samePerson(), is now included in the list of closed predicates. 
