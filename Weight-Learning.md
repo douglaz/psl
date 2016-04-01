@@ -1,5 +1,6 @@
 The job of a Weight Learning Application is to **use data** to learn the weights of each rule in a PSL model.   
 
+##Syntax
 In weight learning we follow the structure below:
 
 ```<WeightLearningApplication> weightLearner = new <WeightLearningApplication>(<model>, <targetDatabase>, <groundTruthDatabase>, <config>)```
@@ -18,4 +19,6 @@ A Weight Learning Application is one of the following:
 After weight learning, the learned `PSLModel` can be printed using `println model`.
 
 To see the weight learning code look [[here | https://github.com/linqs/psl/tree/develop/psl-core/src/main/java/edu/umd/cs/psl/application/learning/weight]]. 
+
+##Example
 
