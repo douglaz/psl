@@ -14,7 +14,7 @@ You can replace the version number at the end with the PSL version you want to u
 
 The [[Maven|http://maven.apache.org]] [[archetype plugin|http://maven.apache.org/archetype/maven-archetype-plugin/]] will then create a new project of PSL examples. The project will be configured to use the Maven project-management tool. The PSL libraries will be downloaded automatically (if necessary) when you use Maven to compile and run this project.
 
-You can now [[run|Running a program]] the [[example programs]].
+You can now [[run|Running a program]] the [[example PSL programs]].
 
 **Tips and troubleshooting**
 
