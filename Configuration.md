@@ -15,8 +15,7 @@ stepsize = cb.getProperty('votedperceptron.stepsize', 100);
 PSL components also pass their bundles to components that they create, so a user can group their property values into a single bundle, pass it into a component with which they interact, and the values will be used by the entire stack of components. Any properties that don't belong to a particular component will be ignored by that component.
 
 ### The psl.properties file
-
-A simple way to specify bundles is in a file named `psl.properties` on the classpath. The standard location for this file is `<project root>/src/main/resources/psl.properties`. Each key-value pair should be specified on its own line with a `<bundle>.<key> = <value>` format. For example,
+PSL projects can specify different configuration bundles in a file named `psl.properties` on the classpath. The standard location for this file is `<project root>/src/main/resources/psl.properties`. Each key-value pair should be specified on its own line with a `<bundle>.<key> = <value>` format. The following example sets options for the `example` and `test` bundles.
 
 ```properties
 # This is an example properties file for PSL.
@@ -33,14 +32,14 @@ example.votedperceptron.schedule = true
 example.votedperceptron.numsteps = 700
 
 # This property specifies the initial step size of the voted perceptron updates
-example.votedperceptron.stepsize = .1
+example.votedperceptron.stepsize = 0.1
 
 # Parameters for the Hard-EM weight learning algorithm
 # This property specifies the number of Hard-EM updates
-example.em.iterations = 1000
+test.em.iterations = 1000
 
 # This property specifies the tolerance to check for convergence for Hard-EM
-example.em.tolerance = 1e-5
+test.em.tolerance = 1e-5
 
 ```
 
