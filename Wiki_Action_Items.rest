@@ -13,11 +13,13 @@ https://github.com/linqs/psl/wiki/Database-creation
 https://github.com/linqs/psl/wiki/Weight-Learning
 
 Update:
+
 https://github.com/linqs/psl/wiki/Eclipse-integration
 
 https://github.com/linqs/psl/wiki/ER-Example
 
 Check:
+
 https://github.com/linqs/psl/wiki/External-functions-example
 
 https://github.com/linqs/psl/wiki/Ontology-alignment-example
