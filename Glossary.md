@@ -4,6 +4,10 @@ The PSL software uses concepts from the [[PSL paper | http://arxiv.org/abs/1505.
 
 **Hinge-loss Markov random field:** A factor graph defined over _continuous_ variables in the [0,1] interval with (log) factors that are hinge-loss functions. Many classes in PSL work together to implement the functionality of HL-MRFs, but the class for storing collections of hinge-loss potentials, which define HL-MRFs, is [[GroundRuleStore.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/application/groundrulestore/GroundRuleStore.java]].
 
+**Ground atom:** A logical relationship corresponding to a random variable in a HL-MRF. For example, `Friends("Steve", "Jay")` is an alias for a specific random variable. Implemented in [[GroundAtom.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/atom/GroundAtom.java]]
+
+**Random variable atom:** A ground atom that 
+
 ## Syntax
 
 **PSL Program:** A set of rules, each of which is a template for hinge-loss potentials or hard linear constraints. When grounded over a base of ground atoms, a PSL program induces a HL-MRF conditioned on any specified observations. Implemented in [[Model.java | https://github.com/linqs/psl/blob/master/psl-core/src/main/java/edu/umd/cs/psl/model/Model.java]]
