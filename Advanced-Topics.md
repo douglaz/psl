@@ -1,6 +1,7 @@
 - [[Configuration]]
 - [[Logging]]
 - [[Eclipse integration]]
+- [[How to use the H2 Web Interface]]
 - [[Running a PSL program as a Markov Logic program ]]
 - [[Switching the PSL version your program uses]]
 - Add-ons
