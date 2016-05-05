@@ -2,7 +2,7 @@
 
 PSL requires that you have [[Java installed | Install Java ]]. 
 
-The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find this `.jar` file under [Downloads on our PSL webpage](http://psl.umiacs.umd.edu/downloads/).
+The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](http://linqs.cs.umd.edu/resources/psl-cli-2.0-SNAPSHOT.jar) until we finalize our v2.0 release.
 ## Running your first program
 Let's first download the files for our example program, run it and see what it does! 
 
