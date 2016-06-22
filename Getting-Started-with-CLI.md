@@ -9,7 +9,7 @@ Let's first download the files for our example program, run it and see what it d
 In this program, we'll use information about known locations of some people and friendship networks between people to collectively infer where some other people live. This form of inference is called collective classification. We'll first run the program and see the output. We will be working from the command line so open up your shell or terminal.
 
 ### Download the simple example
-You can download the files needed for our simple first example program on our "Downloads" page under [Simple CLI Example Files](http://psl.umiacs.umd.edu/downloads/simple_CLI_example)
+You can download the files needed for our simple first example program from [Simple CLI Example Files](http://linqs.cs.umd.edu/resources/psl-cli-example.zip)
 This will a create a new `PSLCLIFirstExample` directory in your current directory.
 
 ### Run your first PSL program
