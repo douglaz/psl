@@ -18,7 +18,7 @@ Change directories to the new `PSLCLIFirstExample` that was created in your curr
 
 `java -jar psl-cli-2.0-SNAPSHOT.jar -infer -model simple_cc.psl -data simple_cc.data`
 
-You should now see output that looks like this: 
+You should now see output that looks like this (note that the order of the output lines may differ): 
 
 ```
 data:: loading:: ::starting
