@@ -47,6 +47,7 @@ From Pigi Kouki:
     maxSize = (int) (len * MAX_LOAD / 100L); 
 
 >to 
+
     maxSize = (int) (((long)len) * MAX_LOAD / 100L); 
 
 >and then create the new jar of this library and included it in the project.
