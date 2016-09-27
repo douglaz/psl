@@ -42,7 +42,7 @@ From Pigi Kouki:
 
 >https://groups.google.com/forum/#!topic/h2-database/XeFtWY_vvBQ
 
->So I needed to download the source code for h2-1.2.126-sources.jar (the version of h2 that PSL uses), change the line in HashBase.java file 
+>So I needed to download the source code for `h2-1.2.126-sources.jar` (the version of h2 that PSL uses), change the line in HashBase.java file 
 
     maxSize = (int) (len * MAX_LOAD / 100L); 
 
