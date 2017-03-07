@@ -9,7 +9,7 @@ Every property has a type and a default value, which is the value the object wil
 Users of the PSL software can specify property values by grouping them into bundles, which are objects that implement the `edu.umd.cs.psl.config.ConfigBundle` interface. Every bundle has a name and a map from property keys to values. A configurable component takes a `ConfigBundle` as an argument in its constructor and queries it with a property key and a default value. If the bundle does not map the key to a value, it returns the provided default, e.g.
 ```
 ConfigBundle cb;
-stepsize = cb.getProperty('votedperceptron.stepsize', 100);
+stepsize = cb.getProperty('votedperceptron.stepsize', 0.1);
 ```
 
 PSL components also pass their bundles to components that they create, so a user can group their property values into a single bundle, pass it into a component with which they interact, and the values will be used by the entire stack of components. Any properties that don't belong to a particular component will be ignored by that component.
