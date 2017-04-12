@@ -2,14 +2,14 @@
 
 PSL requires that you have [[Java installed | Install Java ]]. 
 
-The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](http://linqs.cs.umd.edu/resources/psl-cli-2.0-SNAPSHOT.jar) until we finalize our v2.0 release.
+The PSL jar file `psl-cli-2.0-SNAPSHOT.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](https://linqs-data.soe.ucsc.edu/public/psl_resources/psl-cli-2.0-SNAPSHOT.jar) until we finalize our v2.0 release.
 ## Running your first program
 Let's first download the files for our example program, run it and see what it does! 
 
 In this program, we'll use information about known locations of some people and friendship networks between people to collectively infer where some other people live. This form of inference is called collective classification. We'll first run the program and see the output. We will be working from the command line so open up your shell or terminal.
 
 ### Download the simple example
-You can download the files needed for our simple first example program from [Simple CLI Example Files](http://linqs.cs.umd.edu/resources/psl-cli-example.zip)
+You can download the files needed for our simple first example program from [Simple CLI Example Files](https://linqs-data.soe.ucsc.edu/public/psl_resources/psl-cli-example.zip)
 This will a create a new `PSLCLIFirstExample` directory in your current directory.
 
 ### Run your first PSL program
