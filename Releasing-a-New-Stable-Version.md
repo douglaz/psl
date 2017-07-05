@@ -1,4 +1,4 @@
-This a HOWTO on releasing a new stable PSL version. All first and second level headers are steps in the process, and should be followed sequentially. To make it easier to understand, a complete example of all steps is given in [[new release checklist]].
+This a HOWTO on releasing a new stable PSL version. All first and second level headers are steps in the process, and should be followed sequentially.
 
 # Preliminaries
 
@@ -8,19 +8,20 @@ A release is a single commit that increments the software's version number to a 
 Make sure the [[copyright notices | Updating the Copyright Notice]] are up to date.
 
 ## Test the Code
-Remember to test the code and double check it is ready for release. To complete a release build, you will need all dependencies used by PSL even if not used by your changes, for example the [[MOSEK add-on | MOSEK-add-on]]. Make sure there are no errors or bugs.
-
-1. Install the code. (Run `mvn clean -P release` and `mvn install -P release`.)
-1. [[Install and run the examples | Installing examples]].
+Remember to test the code and double check it is ready for release.
+To clean, compile, and test the code, you can do:
+```
+mvn clean test
+```
 
 ## Find the New Version Number
-Stable version numbers are of the format x.y or x.y.z, where
+Stable version numbers are of the format x.y.z, where
 
 * x = major version
 * y = minor version
 * z = patch version
 
-The git branch the code is on (the working branch) should already have a version number in its `pom.xml` files of the form x.y.z-SNAPSHOT. Whatever x.y.z-SNAPSHOT is, the new version will be x.y.z. Note that the patch version is not written if it is 0. For example, version 1.1 is always written as x.y, not x.y.z. If the new version is just of the form x.y, ignore the ".z" in the below instructions.
+The git branch the code is on (the working branch) should already have a version number in its `pom.xml` files of the form x.y.z-SNAPSHOT. Whatever x.y.z-SNAPSHOT is, the new version will be x.y.z.
 
 # Create the Stable Release
 
@@ -47,9 +48,6 @@ The Master branch should always point to the commit of the highest stable versio
 
 So, if the master branch points to version 1.2, then releasing 1.1.1 would not update the master branch, but releasing 1.2.1 or 1.3 would.
 
-**TODO: Update this after wiki restructuring.**
-If you are updating the master branch, update the latest stable version number listed on the [[version page | Versions]], the [[version changing page | changing versions]], the [[example installation page | Installing examples]], and the [[new project page | Creating a new project]].
-
 If you are updating the master branch, it should already be upstream of the new stable version. Substituting the working branch name for WORKING_BRANCH, simply run the following commands:
 
 ```sh
@@ -70,8 +68,8 @@ git push origin :WORKING_BRANCH
 
 With the new stable version checked out, on a machine with file system access to the repository, in the top level directory of the project (the one with the PSL project pom.xml file, not any of the subprojects), run the following commands:
 ```sh
-mvn clean -P release
-mvn deploy -P release
+mvn clean
+mvn deploy
 ```
 
 # Last Steps

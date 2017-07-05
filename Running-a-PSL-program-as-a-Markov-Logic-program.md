@@ -6,14 +6,14 @@ MPEInference and LazyMPEInference can use MaxWalkSat (MPE inference) and MC-Sat 
 
 ```
 # Sets MPEInference to perform Markov Logic MPE inference
-<bundle>.mpeinference.reasoner = edu.umd.cs.psl.reasoner.bool.BooleanMaxWalkSatFactory
+<bundle>.mpeinference.reasoner = org.linqs.psl.reasoner.bool.BooleanMaxWalkSatFactory
 # Sets MPEInference to perform Markov Logic marginal inference
-<bundle>.mpeinference.reasoner = edu.umd.cs.psl.reasoner.bool.BooleanMCSatFactory
+<bundle>.mpeinference.reasoner = org.linqs.psl.reasoner.bool.BooleanMCSatFactory
 
 # Sets LazyMPEInference to perform Markov Logic MPE inference
-<bundle>.lazympeinference.reasoner = edu.umd.cs.psl.reasoner.bool.BooleanMaxWalkSatFactory
+<bundle>.lazympeinference.reasoner = org.linqs.psl.reasoner.bool.BooleanMaxWalkSatFactory
 # Sets LazyMPEInference to perform Markov Logic marginal inference
-<bundle>.lazympeinference.reasoner = edu.umd.cs.psl.reasoner.bool.BooleanMCSatFactory
+<bundle>.lazympeinference.reasoner = org.linqs.psl.reasoner.bool.BooleanMCSatFactory
 ```
 
 ### Weight Learning
@@ -21,7 +21,7 @@ MPEInference and LazyMPEInference can use MaxWalkSat (MPE inference) and MC-Sat 
 Weight learning that uses a reasoner for MPE inference as a subroutine (e.g., MaxLikelihoodMPE, LazyMaxLikelihoodMPE) can also use Markov Logic MPE inference.
 
 ```
-<bundle>.weightlearning.reasoner = edu.umd.cs.psl.reasoner.bool.BooleanMaxWalkSatFactory
+<bundle>.weightlearning.reasoner = org.linqs.psl.reasoner.bool.BooleanMaxWalkSatFactory
 ```
 
 MaxPseudoLikelihood also supports Markov Logic weight learning.

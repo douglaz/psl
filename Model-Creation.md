@@ -1,1 +1,0 @@
-After importing all relevant Java and Groovy files, you create a PSL model to contain predicates and rules, and to learn weight and perform inference as follows: `PSLModel model = new PSLModel(this, <DataStore object>);`

@@ -1,26 +1,9 @@
-Before [[releasing a new stable version]], it is good to make sure that PSL's copyright notices are up to date. Scripts for doing that are below:
+Before [[releasing a new stable version]], it is good to make sure that PSL's copyright notices are up to date. This can be simply done from the command line.
 
-### OSX Script for Changing Copyright Notices
+For example, if I wanted to update the copyright from `2013-2015` to `2013-2017`, I could do the following in the project root:
 
-```
-#!/bin/bash
-
-# THIS VERSION ONLY WORKS FOR THE MAC OSX VERSION OF SED
-
-die () {
-    echo >&2 "$@"
-    exit 1
-}
-
-[ "$#" -eq 2 ] || die "Two arguments, old and new end years, required"
-
-export LANG=C
-
-find * -not -path '*/\.*' -type f -exec sed -i "" "s_ \* Copyright 2013-$1 The Regents of the University of California_ \* Copyright 2013-$2 The Regents of the University of California_g" {} \;
-
-find . -not -path '*/\.*' -type f -exec sed -i "" "s_  - Copyright 2013-$1 The Regents of the University of California_  - Copyright 2013-$2 The Regents of the University of California_g" {} \;
-
-sed -i '' "s_Copyright 2013-$1 The Regents of the University of California_Copyright 2013-$2 The Regents of the University of California_g" NOTICE
-
-echo "Remember to check the results of this script before committing!"
+```sh
+mvn clean  # We do not want to bother updating any compiled artifacts.
+grep -R "2013-2015"  # Examine the results and ensure that you are only updating correct references.
+grep -Rl "2013-2015" | xargs sed -i 's/2013-2015/2013-2017/g'  # Do the actual replacement.
 ```

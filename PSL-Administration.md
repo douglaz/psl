@@ -1,0 +1,3 @@
+- [[Releasing a New Stable Version]]
+- [[Updating the Version Number]]
+- [[Updating the Copyright Notice]]

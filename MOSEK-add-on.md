@@ -1,4 +1,5 @@
 [MOSEK](http://www.mosek.com/) is software for numeric optimization. PSL can use MOSEK as a conic program solver via a PSL add on.
+Mosek support is provided as part of the [PSL Experimental](https://github.com/linqs/psl-experimental) package.
 
 ### Setting up the MOSEK add on
 
@@ -12,26 +13,25 @@ mvn install:install-file -Dfile=<path-to-mosek.jar> -DgroupId=com.mosek \
 ```
 
 Next, add the following dependency to your project's `pom.xml` file:
-
 ```xml
 <dependencies>
     ...
     <dependency>
-        <groupId>edu.umd.cs</groupId>
-        <artifactId>psl-addon-mosek</artifactId>
+        <groupId>org.linqs</groupId>
+        <artifactId>psl-mosek</artifactId>
         <version>YOUR-PSL-VERSION</version>
     </dependency>
     ...
 </dependencies>
 ```
 
-where `YOUR-PSL-VERSION` is replaced with your PSL [[version | versions]].
+where `YOUR-PSL-VERSION` is replaced with your PSL version.
 
 Finally, it might be necessary to rebuild your project.
 
 ### Using the MOSEK add on
 
-After installing the MOSEK add on, you can use it where ever a `ConicProgramSolver` is used. To use it for inference with a `ConicReasoner` set the `conicreasoner.conicprogramsolver` [[configuration]] property to `edu.umd.cs.psl.optimizer.conic.mosek.MOSEKFactory`.
+After installing the MOSEK add on, you can use it where ever a `ConicProgramSolver` is used. To use it for inference with a `ConicReasoner` set the `conicreasoner.conicprogramsolver` [[configuration]] property to `oorg.linqs.psl.optimizer.conic.mosek.MOSEKFactory`.
 
 Further, MOSEK requires that two environment variables be set when running. The same `bin` directory where you found `mosek.jar` needs to be on the path for shared libraries. The environment variable `MOSEKLM_LICENSE_FILE` needs to be set to the path to your license file (usually `<mosek-root>/6/licenses/mosek.lic`).
 
@@ -43,4 +43,3 @@ export MOSEKLM_LICENSE_FILE=<path_to_mosek_installation>/mosek/6/licenses/mosek.
 ```
 
 On Mac OS X, instead set ```DYLD_LIBRARY_PATH``` to the directory containing the MOSEK binaries.
-
