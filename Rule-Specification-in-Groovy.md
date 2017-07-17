@@ -22,6 +22,9 @@ Because the in-line syntax must be a subset of Groovy syntax, the following oper
 Note that there are supported variants for all unsupported operators.
 **Arithmetic rules** are **not** supported with the in-line syntax.
 
+### Variables
+Variables in rules using the in-line syntax **must** start with a capital letter.
+
 ## String Syntax
 ```groovy
 model.add(
