@@ -21,7 +21,7 @@ public class MyStringSimilarity implements ExternalFunction {
 
 A function comparing the similarity between two entities or text can then be declared as follows:
 ```
-model.add function: MyStringSimilarity, implementation: new MyStringSimilarity();
+model.add function: "MyStringSimilarity", implementation: new MyStringSimilarity();
 ```
 
 A function can be used in the same manner as a predicate in rules:
