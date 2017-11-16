@@ -19,7 +19,7 @@ PSL is a machine learning framework for building probabilistic models developed 
 ## Resources
 ### [[Examples | Examples]]
 
-### [API Refernce](https://linqs-data.soe.ucsc.edu/psl-docs/)
+### [API Reference](https://linqs-data.soe.ucsc.edu/psl-docs/)
 
 ### [[Migration Guide | Migrating to PSL 2]]
 We are improving PSL all the time, and now have two versions! If you are migrating from PSL 1.0 to 2.0 please refer to our Migration Guide.
