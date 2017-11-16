@@ -5,7 +5,7 @@ Ensure that the Java 7 or 8 development kit is installed.
 Either [OpenJDK](http://openjdk.java.net/) or [Oracle Java](https://www.oracle.com/java/index.html) work.
 
 We have had some reports of failing builds using Java prior to `1.7.0_110` or `1.8.0_110`.
-If you are issues with Maven (especially handshake errors), try updating your version of java to at least `1.7.0_110` or `1.8.0_110`.
+If you are having issues with Maven (especially handshake errors), try updating your version of java to at least `1.7.0_110` or `1.8.0_110`.
 This is especially relevant for Mac users where the version of Java is less frequently updated.
 
 ### Maven 3.x
