@@ -7,6 +7,7 @@ PSL requires that you have [[Java installed | Prerequisites ]].
 
 The PSL jar file `psl-cli-2.0.0.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.0.0/psl-cli-2.0.0.jar).
 
+In this page we will be using the `2.0.0` build, but you may use any PSL jar that is at least version 2.0.0 (including `CANARY`).
 
 ## Running your first program
 Let's first download the files for our example program, run it and see what it does! 
