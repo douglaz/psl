@@ -5,7 +5,7 @@ The CLI is the easiest interface to PSL and handles most situations where you do
 
 PSL requires that you have [[Java installed | Prerequisites ]]. 
 
-The PSL jar file `psl-cli-2.0.0.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.0.0/psl-cli-2.0.0.jar) until we finalize our v2.0 release.
+The PSL jar file `psl-cli-2.0.0.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.0.0/psl-cli-2.0.0.jar).
 
 
 ## Running your first program
@@ -28,8 +28,8 @@ All the required commands are contained in the `run.sh` script.
 However, the commands are very simple and can also be run individually.
 You only need to fetch the jar (done in the setup steps above) and run PSL.
 ```
-wget https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/CANARY/psl-cli-CANARY.jar
-java -jar psl-cli-CANARY.jar -infer -model simple_lp.psl -data simple_lp.data
+wget https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.0.0/psl-cli-2.0.0.jar
+java -jar psl-cli-2.0.0.jar -infer -model simple_lp.psl -data simple_lp.data
 ```
 
 You should now see output that looks like this (note that the order of the output lines may differ): 
