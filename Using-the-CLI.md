@@ -5,9 +5,8 @@ The CLI is the easiest interface to PSL and handles most situations where you do
 
 PSL requires that you have [[Java installed | Prerequisites ]]. 
 
-The PSL jar file `psl-cli-CANARY.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/CANARY/psl-cli-CANARY.jar) until we finalize our v2.0 release.
+The PSL jar file `psl-cli-2.0.0.jar` already contains all required PSL libraries that you need to be able to run your PSL programs. You can find a current snapshot of this `.jar` file from our [resources directory](https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.0.0/psl-cli-2.0.0.jar) until we finalize our v2.0 release.
 
-In this page we will be using the `CANARY` build, but you may use any PSL jar that is at least version 2.0.0.
 
 ## Running your first program
 Let's first download the files for our example program, run it and see what it does! 
@@ -172,12 +171,12 @@ Weight learning is described below in greater detail.
 
 Run inference with the general command:
 
-`java -jar psl-cli-CANARY.jar -infer -model [name of model file].psl -data [name of data file].data`
+`java -jar psl-cli-2.0.0.jar -infer -model [name of model file].psl -data [name of data file].data`
 
 When we run inference, the inferred values are outputted to the screen as shown for our example above.
 If you want to write the outputs to a file and use the inferred values in various ways downstream, you can use:
 
-`java -jar psl-cli-CANARY.jar -infer -model [name of model file].psl -data [name of data file].data -output [directory to write output files]`
+`java -jar psl-cli-2.0.0.jar -infer -model [name of model file].psl -data [name of data file].data -output [directory to write output files]`
 
 Values for all predicates will be output as `.csv` files in the specified output directory.
 
