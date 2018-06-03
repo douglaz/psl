@@ -15,12 +15,12 @@ Let's first download the files for our example program, run it and see what it d
 In this program, we'll use information about known locations of some people, know people know, and what people like to infer who knows each other. We'll first run the program and see the output. We will be working from the command line so open up your shell or terminal.
 
 ### Get the code
-As with the other PSL examples, you can find all the code in our [psl-examples repository](https://bitbucket.org/linqs/psl-examples).
+As with the other PSL examples, you can find all the code in our [psl-examples repository](https://github.com/linqs/psl-examples).
 We will be using the `easy` `link prediction` example.
 
 ```
-git clone https://bitbucket.org/linqs/psl-examples.git
-cd psl-examples/link_prediction/easy/cli
+git clone https://github.com/linqs/psl-examples.git
+cd psl-examples/simple-acquaintances/cli
 ```
 
 ### Run your first PSL program
@@ -30,7 +30,7 @@ However, the commands are very simple and can also be run individually.
 You only need to fetch the jar (done in the setup steps above) and run PSL.
 ```
 wget https://linqs-data.soe.ucsc.edu/maven/repositories/psl-releases/org/linqs/psl-cli/2.0.0/psl-cli-2.0.0.jar
-java -jar psl-cli-2.0.0.jar -infer -model simple_lp.psl -data simple_lp.data
+java -jar psl-cli-2.0.0.jar -infer -model simple-acquaintances.psl -data simple-acquaintances.data
 ```
 
 You should now see output that looks like this (note that the order of the output lines may differ): 
@@ -74,7 +74,7 @@ Now that we've run our first program that performs link prediction to infer who 
 #### Defining a Model
 A model in PSL is a set of logic-like rules. 
 
-The model is defined inside a text file with the format `.psl`. We describe this model in the file `simple_lp.psl`.
+The model is defined inside a text file with the format `.psl`. We describe this model in the file `simple-acquaintances.psl`.
 Let's have a look at the rules that make up our model: 
 ```
 20:    Lived(P1,L) & Lived(P2,L) & P1!=P2   -> Knows(P1,P2) ^2
@@ -91,7 +91,7 @@ The `^2` at the end of the rules indicates that the hinge-loss functions based o
 For more details on hinge-loss functions and squared potentials, see the publications on our [PSL webpage](http://psl.linqs.org). 
 
 #### Loading the Data
-PSL rules consist of predicates. The names of the predicates used in our model and possible substitutions of these predicates with actual entities from our network are defined inside the file `simple_lp.data`.
+PSL rules consist of predicates. The names of the predicates used in our model and possible substitutions of these predicates with actual entities from our network are defined inside the file `simple-acquaintances.data`.
 Let's have a look:
 ```
 predicates:
@@ -129,7 +129,7 @@ Here, we give the actual values for the `Knows` predicate for all the people in 
 
 #### Inferring the Missing Values
 
-When we run the `java -jar psl-cli-CANARY.jar -infer -model simple_lp.psl -data simple_lp.data` command with the `-infer` flag, PSL's inference engine substitutes values from the data files into the rules of the model and runs inference on the targets.
+When we run the `java -jar psl-cli-CANARY.jar -infer -model simple-acquaintances.psl -data simple-acquaintances.data` command with the `-infer` flag, PSL's inference engine substitutes values from the data files into the rules of the model and runs inference on the targets.
 
 ## Writing PSL Rules
 
